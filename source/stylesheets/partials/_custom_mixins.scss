@@ -1,0 +1,132 @@
+// ------------------------------------------- //
+//    MATH & LAYOUT   												 //
+// ------------------------------------------- //
+
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
+}
+
+@mixin center-container($container-width)  {
+  max-width:  $blueprint-liquid-container-max-width;
+  width:  (percentage($container-width / $blueprint-liquid-container-max-width)) - ($blueprint-liquid-grid-margin * 2);
+  padding: 0 ($blueprint-liquid-grid-margin);
+  margin: 0 auto;
+}
+
+/* One-true layout hack for equal height columns */
+@mixin equalize-column {
+	margin-bottom: -99999px;
+	padding-bottom: 99999px; 
+}
+
+// ------------------------------------------- //
+//    TYPOGRAPHY       												 //
+// ------------------------------------------- //
+
+@mixin replace-text($width, $height, $background-details) {
+  text-indent: -9999px;
+  display: block;
+  width: $width;
+  height: $height;
+  @include background($background-details);
+}
+
+// ------------------------------------------- //
+//    BUTTONS          												 //
+// ------------------------------------------- //
+
+@mixin create-button($color, $border-radius: 4px, $icon: none) {
+  
+  // Checks if the background color is lighter than #C9C9C9, if so then change color to #333. If not, color is #FFF
+	$darkbg: lightness($color) < lightness(#C9C9C9);
+	$font-color: if($darkbg, #FFF, #333);
+ 
+  //Display and sizing configuration
+  -webkit-appearance: none;
+	-webkit-box-align: center;
+	@include box-sizing(border-box);
+	display: inline-block;
+	position: relative;
+		
+	//Type Configuration
+	color: $font-color;
+	font-family: $font-family;
+	font-weight: bold;
+	font-size: calc-em(13px, $base-font-size);
+	line-height: calc-em(18px, 13px);
+	text-decoration: none;
+	@if $font-color == #FFF {
+	  @include text-shadow(rgba(0,0,0,.6) 0 -1px 0);
+	} @else {
+	  @include text-shadow(rgba(0,0,0,.08) 0 -1px 0, rgba(255,255,255,1) 0 1px 0);
+	}
+	
+	//Background and Border Configuration
+	@if $icon != 'none' {
+    padding: .5em 1.25em .5em 2.4em;
+    @include background($icon, linear-gradient($color darken($color, 5%)));
+  } @else {
+    padding: .5em 1.25em;
+    @include background-image(linear-gradient($color darken($color, 15%)));
+  }
+	@include border-radius($border-radius);
+  @include box-shadow(inset rgba(255,255,255, .3) 0 1px 0, rgba(0,0,0,.2) 0 2px 3px);
+	
+	//Border Configuration
+	border: {
+		width: 1px;
+		style: solid;
+		top: {
+			color: darken($color, 15%);
+		}                        
+		right: {                 
+			color: darken($color, 20%);
+		}                        
+		bottom: {                
+			color: darken($color, 20%);
+		}                        
+		left: {                  
+			color: darken($color, 20%);
+		}
+	}
+	
+	//Transition Configuration
+	@include transition-property(border);
+	@include transition-property(text-shadow);
+	@include transition-duration(.3s);
+	
+	&:visited {
+	  color: $font-color;
+	}
+ 
+  &:hover,
+  &:active {
+    color: $font-color;
+    @include text-shadow(none);
+    //Background and Border Configuration
+  	@if $icon != 'none' {
+      padding: .5em 1.25em .5em 2.4em;
+      @include background($icon, linear-gradient(darken($color, 5%) darken($color, 23%)));
+    } @else {
+      padding: .5em 1.25em;
+      @include background-image(linear-gradient(darken($color, 5%) darken($color, 23%)));
+    }
+  } //hover
+  
+  &:active {
+    @include box-shadow(inset rgba(255,255,255, .3) 0 1px 0);
+    top: 1px;
+  }
+}
+
+// ------------------------------------------- //
+//    IE-FIXES        												 //
+// ------------------------------------------- //
+@mixin ie-buttonify($width, $height, $image-location) {
+	display: block;
+	border: none;
+	width: $width;
+	height: $height;
+	text-indent: -9999px;
+	@include background(image-url($image-location) no-repeat top left);
+}
