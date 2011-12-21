@@ -1,0 +1,15 @@
+# Capfile #
+######################
+build/
+
+# Capfile #
+######################
+Capfile
+
+# SASS  files #
+######################
+.sass-cache/
+
+# OS generated files #
+######################
+.DS_Store*
