@@ -1,3 +1,6 @@
+
+
+
 ### 
 # Compass
 ###
@@ -67,6 +70,8 @@
 
 # Change the images directory
 # set :images_dir, "alternative_image_directory"
+
+
 
 # Build-specific configuration
 configure :build do
