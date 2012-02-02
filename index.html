@@ -1,1 +1,133 @@
-My GitHub Page
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>solutions</title>
+    <meta name="author" content="ryanmerrill">
+    <meta name="generator" content="iA Writer for Mac 1.2">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <style type="text/css">
+      body { color: #222; font: normal normal 400 100%/1.5em georgia,serif; margin: 3em auto; width: 40em }
+      a:link { color: #3366CC }
+      a:visited { color: #224488 }
+      blockquote,ol,p,ul { display: block; margin: 0 0 1.5em }
+      blockquote { border-left: solid .1em #E4E4E4; color: #919191; padding: 0 1.5em 0 1.4em }
+      code { font: normal normal 87.5%/1.71428571em monospace,sans-serif }
+      img { display: block; margin: 1.5em auto }
+      pre { display: block; font: normal normal 87.5%/1.71428571em monospace,sans-serif; margin: 1.71428571em }
+      h1,h2,h3,h4,h5,h6 { font-weight: 400 }
+      h1 { font-size: 225%; line-height: 1.3334em; margin: 0 0 .1666em }
+      h2 { font-size: 175%; line-height: 1.28571429em; margin: 0 0 .35714286em }
+      h3 { font-size: 137.5%; line-height: 1.3636em; margin: 0 0 .5em }
+      h4,h5,h6 { font-size: 112.5%; line-height: 1.3334em; margin: 0 0 .7778em }
+      ol,ul { list-style-position: outside; padding: 0 }
+      ol ol,ol ul,ul ol,ul ul { margin: 0 0 .75em 2em }
+      table { border-collapse: collapse; margin: 1.5em 0; width: 100% }
+      td,th { border: solid .1em #000; font-family: sans-serif; font-size: 87.5%; line-height: 1.71428571em; text-align: center }
+    </style>
+  </head>
+  <body>
+    <h1>Fixing the Dev Cycle </h1>
+
+<h2>Problems </h2>
+<ul><li>Miscommunication between devs about how to apply class names</li>
+<li>Bad default styles being overwritten by a reset stylesheet</li>
+<li>Selectors are buried too deep within markup</li>
+<li>Complex and multiple selectors make rapid development a pain</li>
+<li>Starting from scratch lengthens the time of the project</li>
+<li>Trouble upgrading Compass and configuration</li>
+</ul>
+<h2>Solutions </h2>
+
+<h3><strong>Maintain Current Configuration</strong> </h3>
+<p>Which includes using Compass, Blueprint and our own reset stylesheet. This fixes little problems, but allows us to continue to use the most up-to-date Compass version released with each project.</p>
+
+<h4><strong>Problems</strong> </h4>
+<ul><li>Compass configuration headaches</li>
+<li>Tough for developers to rapidly prototype</li>
+<li>Need to jump into CSS to lay something out</li>
+<li>Has a potential to bloat projects</li>
+</ul>
+<h4><strong>Benefits</strong> </h4>
+<ul><li>Configurable mixins and a basic familiarity</li>
+<li>Actively developed, wrote about and expanded upon</li>
+<li>Tons of plugins, such as Blueprint, Susy Grids, etc.</li>
+<li>Documented</li>
+</ul>
+<h3><strong>Use old-style Blueprint with custom Mixins</strong> </h3>
+<p>Leverage the old non-semantic Blueprint grid with non-semantic mixins which allow developers to include class names in their markup to reference layout.</p>
+
+<h4><strong>Problems</strong> </h4>
+<ul><li>Impossible to make responsive</li>
+<li>Non-semantic markup</li>
+<li>Blueprint is no longer under active development</li>
+</ul>
+<h4><strong>Benefits</strong> </h4>
+<ul><li>Familiarity for designers and developers</li>
+<li>Good reset stylesheet</li>
+</ul>
+<h3><strong>Twitter Bootstrap, straight up</strong> </h3>
+<p>Use the default Twitter Bootstrap configuration as a starting point for each new project.</p>
+
+<h4><strong>Problems</strong> </h4>
+<ul><li>Currently no SASS version</li>
+<li>Need to overwrite a ton of styles for customization</li>
+<li>Fear of stuff looking the same from site to site</li>
+<li>Bloat of unused styles</li>
+<li>Still required to use nested class names and memorization of classes</li>
+</ul>
+<h4><strong>Benefits</strong> </h4>
+<ul><li>Easy to get off the ground</li>
+<li>Maintained by a ton of developers and designers</li>
+<li>Documented</li>
+<li>Standardized class names</li>
+<li>Nice base CSS stylesheet</li>
+</ul>
+<h3><strong>Developing our own</strong> </h3>
+<p>Develop an Ample Getting Started guide that normalizes all HTML elements and also includes our own custom mixins we deem necessary.</p>
+
+<h4><strong>Problems</strong> </h4>
+<ul><li>Need to constantly browser test new additions and mixins</li>
+<li>A lot of work to get off the ground</li>
+<li>Need to document</li>
+</ul>
+<h4><strong>Benefits</strong> </h4>
+<ul><li>Customizable to our needs</li>
+<li>Debatable what to include and what to leave out</li>
+<li>Lean CSS</li>
+</ul>
+
+<h3><strong>Rolling our Own</strong> </h3>
+<p>Steal what we like from other frameworks <s></s> Twitter bootstrap, Susy, Blueprint, etc <s></s> and bake them into our own.</p>
+
+<h4><strong>Problems</strong> </h4>
+<ul><li>Takes awhile to setup</li>
+<li>No documentation</li>
+<li>When a new update comes out of each Framework, we need to manually update</li>
+</ul>
+<h4><strong>Benefits</strong> </h4>
+<ul><li>Ability to use tested CSS in addition to customizing it to suit our needs</li>
+<li>Writing our own mixins allows us to only use what we need and leave out the rest = lean CSS</li>
+</ul>
+<h2>Onto the Grid </h2>
+
+<h3><strong>Susy vs. Blueprint</strong> </h3>
+
+<blockquote><p>"Susy is also different because it is not possible without Compass. Blueprint is a port, Susy is native. Because of that, it seems to me that Blueprint doesn't take advantage of the full potential of Sass - but still leans on outdated notions of what a framework is. Susy uses the full power of Sass to allow absolutely any type of grid (fixed,fluid,elastic) and even combinations, specializing in the useful and difficult fluid-elastic, without any change at all in how you use it. Susy is simply a set of tools that do math for you, and that's how it should be used."</p>
+</blockquote>
+<p>Going forward, I think the more we continue (if we continue) to do responsive designs, Susy is a better option <strong>if</strong> we stick with Compass.</p>
+
+
+<h2>Next Steps? </h2>
+<p>No matter what we decide to use, we should continue to maintain an Ample-Getting-Started repo with a base set of styles and setup to easily allow copying and pasting of the JavaScript, Stylesheet and basic application.html.erb layout file for each new project we start. This repo will hold the latest version of the framework and also serve as a place we can add our own mixins.</p>
+
+<h3><strong>Resources</strong> </h3>
+<ul><li><strong>Susy</strong> http://susy.oddbird.net/</li>
+<li><strong>Twitter Bootstrap</strong> http://twitter.github.com/bootstrap/</li>
+<li><strong>Compass</strong> http://compass-style.org/reference/compass/</li>
+<li><strong>Blueprint</strong> http://blueprintcss.org/</li></ul>
+  </body>
+</html>
