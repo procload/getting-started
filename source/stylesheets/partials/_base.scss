@@ -2,13 +2,11 @@
 /*    VARIABLES & SETUP              					 */
 /* ------------------------------------------- */
 
-/* Blueprint Liquid Configuration */
-$blueprint-liquid-grid-columns            : 24;
-$blueprint-liquid-grid-width              : 3.167%;
-$blueprint-liquid-grid-margin             : 1.042%;
-$blueprint-liquid-container-width         : 80%;
-$blueprint-liquid-container-min-width     : 320px;
-$blueprint-liquid-container-max-width     : 950px;
+/* Susy Grid Configuration */
+$total-cols: 12;
+$col-width: 4em;
+$gutter-width: 1em;
+$side-gutter-width: $gutter-width;
 
 /* Primary Typography configuration */
 $font-family	          : Helvetica, "Helvetica Neue", Arial, sans-serif;
@@ -25,11 +23,11 @@ $secondary-content-color: #7d7d7d;
 
 /* Link configuration */
 $header-link-color			: #7d7d7d;
-$link-color							: #533d79;
+$link-color							: #3088E3;
 $link-hover-color       : darken($link-color, 10%);
 $link-active-color      : darken($link-color, 10%);
-$link-visited-color     : #533d79;
-$link-focus-color       : #533d79;
+$link-visited-color     : #3088E3;
+$link-focus-color       : darken($link-color, 10%);
 $footer-link-color  		: #655a78;
 
 /* Default text-shadow configuration, will create a letterpress effect */
@@ -52,13 +50,12 @@ $focus-border-color						: darken(#b0b0b0, 5%) darken(#ddd, 5%) darken(#ddd, 5%)
 $fieldset-border-color				: none;
 
 // Compass files to load
+@import "susy";
+$show-grid-backgrounds: true;
 @import "compass/css3";
 @import "compass/typography/links";
 @import "compass/typography/vertical_rhythm";
 @import "compass/typography/lists/horizontal-list";
-
-// Blueprint files to load
-@import "blueprint/liquid";
 
 //Custom mixin and function files required by reset, layout, modules and states
 @import "custom_mixins";

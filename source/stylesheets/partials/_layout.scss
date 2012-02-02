@@ -4,6 +4,9 @@ body {
   //    HEADER																	 //
   // ------------------------------------------- //
   .l-header {
+    h1 {
+      @include full;
+    }
 
   } //l-header
 
@@ -14,14 +17,16 @@ body {
   //    CONTENT STRUCTURE												 //
   // ------------------------------------------- //
 
+
   // ---- Containers --------------------------- //
   .container {
-    @include center-container(950px);
+    @include container;
+    @include susy-grid-background;
   }
 
   // ---- Content ------------------------- //
   .l-content {
-
+    @include full;
   }
 
 
@@ -35,7 +40,7 @@ body {
   // ------------------------------------------- //
 
   .l-footer {
-
+    @include full;
   } //l-footer
   
 }
