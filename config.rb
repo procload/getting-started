@@ -3,7 +3,7 @@
 ###
 
 # Susy grids in Compass
-require 'susy'
+# require 'susy'
 
 # 960.gs grids in Compass
 # First: gem install compass-960-plugin
@@ -45,10 +45,10 @@ require 'susy'
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 
-require "kss"
-page "/styleguide/*", :layout => :styleguide do
-  @styleguide = Kss::Parser.new('source/css')
-end
+# require "kss"
+# page "/styleguide/*", :layout => :styleguide do
+#   @styleguide = Kss::Parser.new('source/css')
+# end
 
 ###
 # Helpers
@@ -64,23 +64,6 @@ helpers do
     else
       start_year.to_s + '-' + end_year.to_s
     end
-  end
-  
-  # Generates a styleguide block.
-  def styleguide_block(section, &block)
-    @section = @styleguide.section
-    @example_html = kss_capture{ block.call }
-    @_out_buf << partial('styleguide/block')
-  end
-
-  # Captures the result of a block within an erb template without spitting it
-  # to the output buffer.
-  def kss_capture(&block)
-    out, @_out_buf = @_out_buf, ""
-    yield
-    @_out_buf
-  ensure
-    @_out_buf = out
   end
   
 end
