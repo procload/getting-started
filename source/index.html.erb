@@ -1,7 +1,3 @@
----
-page_title: 'Index'
----
-
 <section class="header-examples">
 	<h2>Header Examples</h2>
 	<hgroup>
@@ -15,13 +11,10 @@ page_title: 'Index'
 </section>
 
 <section class="paragraph-examples">
-	<h2>Paragraph Examples</h2>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie, arcu sed sollicitudin venenatis, felis ipsum tristique ante, et mollis urna tellus quis mauris. Mauris tincidunt rutrum velit, id feugiat orci mollis vitae. Sed auctor purus eu augue gravida bibendum. Nunc odio urna, cursus at sagittis nec, tempor vitae nunc. Mauris gravida, urna vel convallis dictum, nisl purus egestas sem, eu fringilla libero ligula quis mi. In malesuada nibh et magna auctor facilisis. Nam convallis vulputate vestibulum. Suspendisse sagittis semper condimentum. Mauris vel lobortis sem. Ut tempor imperdiet eros, quis malesuada libero placerat dictum.
-	</p>
-	<p>
-		Suspendisse hendrerit aliquet ante, a egestas tellus pharetra non. Nulla facilisi. Vivamus vitae est viverra turpis faucibus dignissim vel a sapien. Nunc fringilla rhoncus bibendum.
-	</p>
+  <%= content_tag :h2, lorem.sentence %>
+	<%= simple_format lorem.paragraphs(2) %>
+  
+  <%= image_tag lorem.image('300x400', :text => 'blah') %>
 </section>
 
 <section class="form-examples">
