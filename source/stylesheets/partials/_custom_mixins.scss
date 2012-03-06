@@ -1,0 +1,171 @@
+// ------------------------------------------- //
+//    MATH & LAYOUT   												 //
+// ------------------------------------------- //
+
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
+}
+
+/* One-true layout hack for equal height columns */
+@mixin equalize-column {
+	margin-bottom: -99999px;
+	padding-bottom: 99999px; 
+}
+
+@mixin group() {
+	*zoom:1;
+	&:before,
+	&:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ".";
+    clear: both;
+    height: 0;
+	}
+}
+
+// ------------------------------------------- //
+//    GRID BACKGROUND     										 //
+// ------------------------------------------- //
+ 
+@function build-grid(   $total-columns: 19,
+                        $page-width:    930px,
+                        $column-width-percent: 30px,
+                        $gutter-width-percent: 20px,
+                        $column-color: rgba(255,0,255,.05)) {
+    
+  //Always transparent white for gutters
+  $transparent-color: rgba(255,255,255,0);
+  
+  //Linear Gradient
+  $lg:  $column-color 0,
+        $column-color $column-width-percent,
+                
+        //Gutter
+        $transparent-color $column-width-percent,
+        $transparent-color $column-width-percent + $gutter-width-percent,
+  
+        //Column
+        $column-color $column-width-percent + $gutter-width-percent,
+        $column-color ($column-width-percent * 2) + $gutter-width-percent;
+  
+  @for $i from 2 through $total-columns  {
+    
+    $j: $i;
+    
+    //Gutter
+    $gutter-start: $transparent-color ($column-width-percent * $j) + ($gutter-width-percent * ($j - 1));
+    $gutter-end: $transparent-color (($column-width-percent * $j) + ($gutter-width-percent * $j));
+    
+    $lg: join($lg, ($gutter-start, $gutter-end));
+  
+    //Column
+    $column-start: $column-color ($column-width-percent * $j) + ($gutter-width-percent * $j);
+    $column-end:  $column-color ($column-width-percent * ($j + 1)) + ($gutter-width-percent * $j);    
+    $lg: join($lg, ($column-start, $column-end));
+  }
+  @return $lg;
+}
+
+@mixin grid-background($total-columns: $gridColumns,
+                       $grid-column-width: $gridColumnWidth,
+                       $grid-gutter-width: $gridGutterWidth,
+                       //$offset: $grid-background-offset,
+                       $column-color: rgba(255,0,255,.05)) {
+    
+  //Calculates the page width
+  $page-width: ($grid-column-width * $total-columns) + ($grid-gutter-width * ($total-columns - 1));
+    
+  //Calculating column and gutter widths as a percent to use them in linear-gradients
+  $column-width-percent: percentage(($grid-column-width / $page-width));
+  $gutter-width-percent: percentage(($grid-gutter-width / $page-width));
+  
+  $linear-gradient: build-grid($total-columns, $page-width, $column-width-percent, $gutter-width-percent, $column-color);
+  
+  //Support for all b
+  background-image:  -webkit-linear-gradient(left, $linear-gradient); // Safari 5.1+, Chrome
+  background-image:     -moz-linear-gradient(left, $linear-gradient);
+  background-image:      -ms-linear-gradient(left, $linear-gradient);
+  background-image:       -o-linear-gradient(left, $linear-gradient);
+  background-image: unquote("linear-gradient(left, #{$linear-gradient})");
+  
+} //grid-background
+
+
+// ------------------------------------------- //
+//    TYPOGRAPHY       												 //
+// ------------------------------------------- //
+
+@mixin replace-text($width, $height, $background-details) {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  width: $width;
+  height: $height;
+  background: $background-details;
+}
+
+// ------------------------------------------------------ //
+//    Background/Colors           												//
+// ------------------------------------------------------ //
+
+@mixin imprint-light {
+  background: #feffff;
+  @include background-image(linear-gradient(#fff, #efefef));
+  @include box-shadow(inset rgba(0,0,0,.2) 0 1px 2px, inset rgba(255,255,255,.1) 0 -1px 0);
+  
+  border: {
+  	style: solid;
+  	width: 1px;
+  	top: {
+  		color: rgba(0,0,0,.5);
+  	}
+  	right: {
+  		color: rgba(0,0,0,.3);
+  		width: 1px;
+  	}
+  	bottom: {
+  		color: rgba(0,0,0,.2);
+  	}
+  	left: {
+  		color: rgba(0,0,0,.3);
+  		width: 1px;
+  	}
+  } 
+}
+
+@mixin imprint-dark {
+  background: #141414;
+  @include background-image(linear-gradient(#141414, #070707));
+  @include box-shadow(inset rgba(0,0,0,1) 1px 2px 3px, inset rgba(255,255,255,.08) 0 -1px 0);
+  border: {
+  	style: solid;
+  	width: 1px;
+  	top: {
+  		color: #000;
+  	}
+  	right: {
+  		color: #000;
+  	}
+  	bottom: {
+  		width: 0;
+  	}
+  	left: {
+  		color: #000;
+  	}
+  } 
+}
+
+// ------------------------------------------- //
+//    IE-FIXES        												 //
+// ------------------------------------------- //
+@mixin ie-buttonify($width, $height, $image-location) {
+	display: block;
+	border: none;
+	width: $width;
+	height: $height;
+	text-indent: -9999px;
+	@include background(image-url($image-location) no-repeat top left);
+}
