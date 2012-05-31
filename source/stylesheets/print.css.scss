@@ -1,0 +1,5 @@
+@import 'partials/base'
+
+.container {
+  @include grid_background();
+}

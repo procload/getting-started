@@ -101,8 +101,10 @@ $fluidGridGutterWidth:    2.127659574%;
 // My Mixins
 @import "partials/custom_mixins";
 
+//Compass Mixins
+@import "compass/css3";
+
 // Twitter Bootstrap
 @import "bootstrap";
 
-@import "partials/global";
 @import "partials/font_awesome"
