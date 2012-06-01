@@ -1,2 +1,17 @@
-@import "partials/base";
+@import 'partials/base';
+
+
+// Global
+// --------------------------------------------------
+
+body {
+  background: $backgroundColor image-url('backgrounds/bg-page.png') repeat;
+  color: $textColor;
+  line-height: 1.5;
+  font-size: 100%;
+  font-family: $baseFontFamily;
+}
+
+.container {
+}
 
