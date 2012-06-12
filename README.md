@@ -8,9 +8,11 @@
 
 1. Create a new repo at http://github.com/
 2. Clone the Getting Started repo
+
     ```
 	$ git clone git@github.com:ample/ample-getting-started.git
 	```
+	
 3. Rename the cloned directory and cd into it
 	```
   	$ mv ample-getting-started your-project
