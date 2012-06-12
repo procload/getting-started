@@ -6,7 +6,7 @@
 
 ###Get the repo up and running locally:
 
-1. #####Create a new repo#####
+1. #####Create a new repo repo#####
 2. #####Clone the Getting Started repo#####
 
     ```
