@@ -6,8 +6,8 @@
 
 ###Get the repo up and running locally:
 
-1. _Create a new repo at http://github.com/ _
-2. _Clone the Getting Started repo_
+1. Create a new repo at http://github.com/
+2. Clone the Getting Started repo
     ```
 	$ git clone git@github.com:ample/ample-getting-started.git
 	```
