@@ -24,97 +24,71 @@
 
 <section class="form-examples">
 	<h2>Form Examples</h2>
-	<form id="" method="">
-		<fieldset>
-			<ul class="form-list">
-				<li class="form-title">
-					<h2>Sign-up Information Form</h2>
-					<em>Fields marked with * must be filled in</em>
-				</li>
-
-				<li class="form-header">
-					<h3>Contact Information</h3>
-				</li>
-				<li class="short-clear">
+	
+  
+  <form>
+    <fieldset>
+      <div class="control-group">
+        <label>
 					<label for="first-name">First Name *</label>
 					<input id="first-name" placeholder="First Name" type="text" required />
-				</li>
-				<li class="short-right">
-					<label for="last-name">Last Name *</label>
-					<input id="last-name" placeholder="Last Name" type="text" required />
-				</li>
-				<li class="short-clear">
+        </label>
+      </div>
+      
+      <div class="control-group">
+        <label>
 					<label for="email">Email</label>
-					<input id="email" placeholder="Email" type="email" />
-				</li>
-				<li class="short-right">
-					<label for="telephone">Telephone</label>
-					<input id="telephone" placeholder="Telephone" type="tel" />
-				</li>
-				<li class="form-header">
-					<h3>Professional Information</h3>
-				</li>
-				<li class="full-clear">
-					<label for="url">URL</label>
-					<input id="url" placeholder="Web Address" type="url" />
-				</li>
-				<li class="short-clear">
-					<label for="age">Age</label>
-					<input id="age" placeholder="Age" type="number" min="1" max="100" />
-				</li>
-
-				<li class="short-right">
-					<label for="salary">Salary</label>
-					<input id="salary" type="range" min="0" max="1000000" step="10000" value="30000"  />
-				</li>
-
-				<li class="form-header">
-					<h3>Personal Information</h3>
-				</li>
-				<li class="full-clear">
-					<label for="birthday">Birthday</label>
-					<input id="birthday" placeholder="i.e. 11/11/1983" type="date" />
-				</li>
-
-				<li class="short-clear">
-					<label for="favorite-color">Favorite Color</label>
-					<input id="favorite-color" type="color" placeholder="i.e. Orange" />
-				</li>
-
-				<li class="short-right">
-					<label for="favorite-band">Favorite Band</label>
-					<input id="favorite-band" type="search" placeholder="Search for your Band" />
-				</li>
-
-				<li class="form-buttons">
-					<input type="submit" value="Default Button" class="button" />
-					<input type="submit" value="Submit Form" class="button primary-action" />
-					<input type="submit" value="Save Form" class="button secondary-action" />
-					<input type="submit" value="Successsful" class="button positive-action" />
-					<input type="submit" value="Warning Button" class="button warning-action" />
-				</li>
-
-			</ul>
-		</fieldset>
-	</form>
+					<input id="email" placeholder="Email" type="email" required />
+        </label>
+      </div>
+      
+      <div class="control-group">
+        <label>
+					<label for="password">Password</label>
+					<input id="password" placeholder="Password" type="password" required />
+        </label>
+      </div>
+      
+      
+    </fieldset>
+  </form>
 </section>
+
+<hr />
 
 <section class="notification-examples">
 	<h2>Notification Examples</h2>
-	
-	<div class="notification">
-		<div class="notification-content error">
-			<h2>This is an example of an error message headline</h2>
-			<ul>
-				<li>Reason why it cannot work</li>
-				<li>Another reason why it cannot work</li>
-				<li>Yet another reason</li>
-			</ul>
-		</div>
+	    
+	<div class="alert">
+		<h2>This is an example of an error message headline</h2>
+		<ul>
+			<li>Reason why it cannot work</li>
+			<li>Another reason why it cannot work</li>
+			<li>Yet another reason</li>
+		</ul>
+	</div>
+  
+	<div class="alert alert-info">
+		<h2>This is an example of an error message headline</h2>
+		<ul>
+			<li>Reason why it cannot work</li>
+			<li>Another reason why it cannot work</li>
+			<li>Yet another reason</li>
+		</ul>
+	</div>
+  
+    
+    
+	<div class="alert alert-error">
+		<h2>This is an example of an error message headline</h2>
+		<ul>
+			<li>Reason why it cannot work</li>
+			<li>Another reason why it cannot work</li>
+			<li>Yet another reason</li>
+		</ul>
+	</div>
 		
-		<div class="notification-content notice">
-			Your request has been submitted successfully, please continue with your work
-		</div>
-		
+	<div class="alert alert-success">
+		Your request has been submitted successfully, please continue with your work
 	</div>
 </section>

@@ -8,6 +8,9 @@
 // GLOBAL VALUES
 // --------------------------------------------------
 
+// Background
+$backgroundColor:                  #FFF;
+
 // Links
 $linkColor:                        #08c;
 $linkColorHover:                   darken($linkColor, 15%);
@@ -32,9 +35,9 @@ $pink:                             #c3325f;
 $purple:                           #7a43b6;
       
 // Typography                    
-$baseFontSize:                     13px;
+$baseFontSize:                     15px;
 $baseFontFamily:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
-$baseLineHeight:                   18px;
+$baseLineHeight:                   22px;
 $textColor:                        #024475;
 
 // Buttons                         

@@ -6,22 +6,19 @@
 
 Get the repo up and running locally:
 
-    $ git clone -b landing-pages git@github.com:ample/learningally-org.git
+    $ git clone git@github.com:ample/ample-getting-started.git
     $ bundle install
 
 Running the server:
 
-    # If using Pow, just symlink the project directory
-    $ powder
-    # Or start the middleman server
-    $ bundle exec middleman server
+    # Start the middleman server
+    $ middleman server
 
 ## Usage
 
 Generate static assets for release:
 
-    $ bundle exec middleman build
-
+    $ middleman build
 
 ## Questions?
 

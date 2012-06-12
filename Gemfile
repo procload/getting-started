@@ -1,5 +1,6 @@
 source :rubygems
 
+gem "coffee_cup"
 gem "sass", "~> 3.2.0.alpha.244"
 gem "middleman", "~> 3.0.0.rc.1"
 gem 'middleman-smusher'
