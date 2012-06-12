@@ -39,12 +39,12 @@
 	$ git add .
 	$ git commit -m "Initial commit."
 	```
-8. Create a new gemset with the name of your project
+8. _Create a new gemset with the name of your project_
 
 	```
 	$ echo 'rvm 1.9.3@your-project --create' > .rvmrc
 	```
-9. Move out of the directory and then back in to initialize your gemset
+9. *Move out of the directory and then back in to initialize your gemset*
 
 	```
 	$ cd ..
