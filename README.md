@@ -44,13 +44,13 @@
 	```
 	$ echo 'rvm 1.9.3@your-project --create' > .rvmrc
 	```
-9. * Move out of the directory and then back in to initialize your gemset *
+9. *Move out of the directory and then back in to initialize your gemset*
 
 	```
 	$ cd ..
 	$ cd your-project
   	```
-10. ####Install bundler####
+10. #####Install bundler#####
 
 	```
 	$ gem install bundler
