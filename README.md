@@ -52,18 +52,18 @@
 	```
 	$ bundle install
 	```
+	
 ## Usage
 
 ### Running the server
 
-```
- # Start the middleman server
- $ middleman server
-```
+    # Start the middleman server
+    $ middleman server
+ 
 ### Generate static assets for release:
-	```
+
     $ middleman build
-	```
+	
 ## Questions?
 
 Contact developers@helloample.com
