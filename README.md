@@ -6,7 +6,7 @@
 
 ###Get the repo up and running locally:
 
-1. ##### Create a new repo at http://github.com/ #####
+1. #####Create a new repo#####
 2. #####Clone the Getting Started repo#####
 
     ```
