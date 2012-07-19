@@ -10,56 +10,57 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Index</title>
+  <title>Index</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <%= stylesheet_link_tag "screen.css" %>
+  <%= javascript_include_tag "script.js" %>
   <%= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js" %>
-	
+  
 </head>
 
   <body class="<%= page_classes %>">
-		
-		<div class="container">
-		
-	    <header class="l-header">
-				<h1>Getting Started Styles</h1>
-		  </header>
-			<!-- /site-header -->
-		
-		  <div class="l-content" role="main">
-				<%= yield %>
-			</div>
-				
-		
-			<footer class="l-footer">
-				&copy; Copyright <%= copyright_years(2011) %>, Ample
-		  </footer>
-			<!-- /site-footer -->
-		
-		
-		</div>
     
-	  <!-- JavaScript at the bottom for fast page loading -->
-	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <div class="container">
+    
+      <header class="l-header">
+        <h1>Getting Started Styles</h1>
+      </header>
+      <!-- /site-header -->
+    
+      <div class="l-content" role="main">
+        <%= yield %>
+      </div>
+        
+    
+      <footer class="l-footer">
+        &copy; Copyright <%= copyright_years(2011) %>, Ample
+      </footer>
+      <!-- /site-footer -->
+    
+    
+    </div>
+    
+    <!-- JavaScript at the bottom for fast page loading -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 
-	  <!-- Asynchronous Google Analytics snippet. -->
-	  <script>
-	    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
-	    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-	    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	    s.parentNode.insertBefore(g,s)}(document,'script'));
-	  </script>
+    <!-- Asynchronous Google Analytics snippet. -->
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
 
-	  <!-- Prompt IE 6 users to install Chrome Frame.
-	       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	  <!--[if lt IE 7 ]>
-	    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-	    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-	  <![endif]-->
+    <!-- Prompt IE 6 users to install Chrome Frame.
+         chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+      <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+      <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
 
   </body>
 </html>
