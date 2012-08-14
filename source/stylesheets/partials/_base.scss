@@ -9,7 +9,7 @@
 $backgroundColor:                  #FFF;
 
 // Links
-$linkColor:                        #08c;
+$linkColor:                        #00b3f6;
 $linkColorHover:                   darken($linkColor, 15%);
 
 // Grays
@@ -33,15 +33,16 @@ $purple:                           #7a43b6;
       
 // Typography                    
 $baseFontSize:                     15px;
-$baseFontFamily:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseFontFamily:                   "museo-sans", Helvetica, Arial, sans-serif;
 $baseLineHeight:                   22px;
-$textColor:                        #024475;
+$textColor:                        #0F0F0F;
+$headlineTextColor:                #00b3f6;
 
 // Buttons                         
 $primaryButtonBackground:          $linkColor;
 
 //Borders
-$borderColor:                      #b3cee0;
+$borderColor:                      #1a1a1a;
 
 // COMPONENT VARIABLES
 // --------------------------------------------------
@@ -84,14 +85,15 @@ $infoBorder:                      darken(adjust-hue($infoBackground, -10), 7%);
 // --------------------------------------------------
  
 // Default 940px grid
-$gridColumns:             12;
-$gridColumnWidth:         60px;
-$gridGutterWidth:         20px;
+$gridColumns:             8;
+$gridColumnWidth:         90px;
+$gridGutterWidth:         40px;
 $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
 
 // Fluid grid
-$fluidGridColumnWidth:    6.382978723%;
-$fluidGridGutterWidth:    2.127659574%;
+$fluidGridColumnWidth:    8.6538462%;
+$fluidGridGutterWidth:    3.8461538%;
+
 
 
 // Imports & Includes
@@ -106,5 +108,9 @@ $fluidGridGutterWidth:    2.127659574%;
 
 // Twitter Bootstrap
 @import "bootstrap";
+@import "bootstrap-responsive";
 
-@import "partials/font_awesome"
+@import "partials/responsive-767px-max";
+
+@import "partials/font_awesome";
+

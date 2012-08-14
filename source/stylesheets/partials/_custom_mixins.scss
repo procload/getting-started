@@ -26,6 +26,37 @@
 }
 
 // ------------------------------------------- //
+//    MEDIA QUERIES   												 //
+// ------------------------------------------- //
+
+$breakSmall: 320px;
+$breakMedium: 767px;
+$breakLarge: 979px;
+
+@mixin respond-to($media) {
+  @if $media == tiny-screens {
+    @media only screen and (max-width: $breakSmall) { @content; }
+  }
+  @else if $media == small-screens {
+    @media only screen and (min-width: $breakSmall + 1) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $breakMedium + 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $breakLarge) { @content; }
+  }
+}
+
+@mixin retina-image($width, $height) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+    -webkit-background-size: $width $height;
+  }
+}
+
+
+// ------------------------------------------- //
 //    GRID BACKGROUND     										 //
 // ------------------------------------------- //
  
@@ -98,7 +129,7 @@
 // ------------------------------------------- //
 
 @mixin replace-text($width, $height, $background-details) {
-  text-indent: 100%;
+  text-indent: -9999px;
   white-space: nowrap;
   overflow: hidden;
   display: block;

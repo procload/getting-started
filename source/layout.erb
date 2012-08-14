@@ -16,33 +16,71 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <%= stylesheet_link_tag "screen.css" %>
-  <%= javascript_include_tag "script.js" %>
+  
+  <%= stylesheet_link_tag "screen" %>
+  <%= javascript_include_tag "script" %>
   <%= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js" %>
+  <script type="text/javascript" src="//use.typekit.net/clx8wzz.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   
 </head>
 
   <body class="<%= page_classes %>">
     
-    <div class="container">
+    <header id="site-header" class="site-header">
+      <div class="container">
+        <div class="row-fluid">
+          <div class="span6 intro">
+            <h2><span>Refresh is a community of like-minded</span> <span>designers, developers, and more interested</span> <span>in pushing Cincinnati forward. <%= link_to 'Join us.', '#' %></span></h2>
+          </div>
+          <div class="span2 logo">
+            <h1>RefreshCincy</h1>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </header>
+    <!-- site-footer -->
     
-      <header class="l-header">
-        <h1>Getting Started Styles</h1>
-      </header>
-      <!-- /site-header -->
-    
-      <div class="l-content" role="main">
+    <div class="main-content">
         <%= yield %>
       </div>
-        
-    
-      <footer class="l-footer">
-        &copy; Copyright <%= copyright_years(2011) %>, Ample
-      </footer>
-      <!-- /site-footer -->
-    
-    
+      <!-- /container -->
     </div>
+    <!-- /main-content -->
+    
+    <footer class="site-footer">
+      <div class="newsletter-signup">
+        <div class="container">
+          <div class="row-fluid">
+            <h1 class="span5">Let's make Cincinnati great together.</h1>
+            <div class="span3">
+              <input type='email' placeholder='Sign-up for our newsletter' />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /newsletter-signup -->
+      <div class="sponsors">
+        <div class="container">
+          <ul class="unstyled sponsor-list">
+            <li>
+              <%= link_to image_tag('img-ample.png'), 'http://helloample.com/' %>
+            </li>
+          </ul>
+          <!-- /sponsor-list -->
+          
+          <span>&copy; Copyright RefreshCincy 2012</span>
+        </div>
+      </div>
+      <!-- /footer-content -->
+      
+    </footer>
+    <!-- /site-footer -->
+      
+    
+    
     
     <!-- JavaScript at the bottom for fast page loading -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>

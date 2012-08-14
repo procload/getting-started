@@ -1,94 +1,77 @@
-<section class="header-examples">
-  <h2>Header Examples</h2>
-  <hgroup>
-    <h1>Hello, World</h1>
-    <h2>Second level headline</h2>
-    <h3>Third level headline</h3>
-    <h4>Fourth level headline</h4>
-    <h5>Fifth level headline</h5>
-    <h6>Sixth level headline</h6>
-    
-    <div style="font-size: 24px;">
-      <i class="icon-camera-retro"></i> icon-camera-retro
+      
+
+<div class="container">
+      
+  <h1>We're mutually inclusive by default.</h1>
+  <section class="row-fluid about-refresh">
+    <div class="span5 refresh-background">
+      <p>
+        Sick of meetups where developers hide in one corner and the designers congregate in another? We were too.
+      </p>
+      <p>
+        We formed RefreshCincy on the heels of QCMerge, an event that drew technologists from all backgrounds together that began to create a buzz around town.
+      </p>
     </div>
-    
-  </hgroup>
-</section>
-
-<section class="paragraph-examples">
-  <%= content_tag :h2, lorem.sentence %>
-  <%= simple_format lorem.paragraphs(2) %>
+    <!-- /refresh-background -->
+    <div class="refresh-audience well pull-right">
+      <ul class="unstyled">
+        <li class="designers">
+          Designers
+        </li>
+        <li class="makers">
+          Makers
+        </li>
+        <li class="developers">
+          Developers
+        </li>
+        <li class="writers">
+          Writers
+        </li>
+        <li class="engineers">
+          Engineers
+        </li>
+        <li class="editors">
+          Editors
+        </li>
+        <li class="in-between">
+          &amp; everything in-between
+        </li>
+      </ul>
+    </div>
+    <!-- refresh-audience -->
+  </section>
+  <!-- /about-refresh -->
+</div>
+<!-- /container -->
   
-  <%= image_tag lorem.image('300x400', :text => 'blah') %>
-</section>
-
-<section class="form-examples">
-  <h2>Form Examples</h2>
-  
-  
-  <form>
-    <fieldset>
-      <div class="control-group">
-        <label>
-          <label for="first-name">First Name *</label>
-          <input id="first-name" placeholder="First Name" type="text" required />
-        </label>
+<section class="next-event">
+  <div class="container">
+    <h2>So when is the next event?</h2>
+    <article class="event">
+      <div class="row-fluid">
+        <div class="event-description span4">
+          <h3>Becoming Responsive</h3>
+          <p>In this workshop, we'll give a brief background of what Responsive Web Design is and delve further into how Responsive Web Design is changing the process of designing and developing for today's web.</p>
+        </div>
+        <!-- /event-description -->
       </div>
-      
-      <div class="control-group">
-        <label>
-          <label for="email">Email</label>
-          <input id="email" placeholder="Email" type="email" required />
-        </label>
+      <!-- /row -->
+      <div class="row-fluid">
+        <div class="event-location span2">
+          <h3>Ample</h3>
+          <p>5th Floor</p>
+        </div>
+        <!-- /event-location -->
+        <div class="span2 event-time">
+          <h3>Aug. 9, 2012</h3>
+          <p>6:30 p.m.</p>
+        </div>
+        <!-- event-time -->
       </div>
-      
-      <div class="control-group">
-        <label>
-          <label for="password">Password</label>
-          <input id="password" placeholder="Password" type="password" required />
-        </label>
-      </div>
-      
-      
-    </fieldset>
-  </form>
+      <!-- /row -->
+    </article>
+    <!-- /event -->
+  </div>
+  <!-- /container -->
 </section>
-
-<hr />
-
-<section class="notification-examples">
-  <h2>Notification Examples</h2>
-      
-  <div class="alert">
-    <h2>This is an example of an error message headline</h2>
-    <ul>
-      <li>Reason why it cannot work</li>
-      <li>Another reason why it cannot work</li>
-      <li>Yet another reason</li>
-    </ul>
-  </div>
-  
-  <div class="alert alert-info">
-    <h2>This is an example of an error message headline</h2>
-    <ul>
-      <li>Reason why it cannot work</li>
-      <li>Another reason why it cannot work</li>
-      <li>Yet another reason</li>
-    </ul>
-  </div>
-  
-    
-    
-  <div class="alert alert-error">
-    <h2>This is an example of an error message headline</h2>
-    <ul>
-      <li>Reason why it cannot work</li>
-      <li>Another reason why it cannot work</li>
-      <li>Yet another reason</li>
-    </ul>
-  </div>
-    
-  <div class="alert alert-success">
-    Your request has been submitted successfully, please continue with your work
-  </div>
-</section>
+<!-- /next-event -->
