@@ -77,7 +77,6 @@ p {
   } //logo
   
 
-  
   h1 {
     @include replace-text(279px, 171px, image-url('img-logo.png') no-repeat top left);
     margin: 0 auto;
@@ -363,21 +362,61 @@ p {
     font-size: calc-em(18px, $baseFontSize);
     font-weight: 100;
     height: calc-em(32px, 18px);
-    width: 80%;
+    width: 82%;
     margin: 0;
     
     @include respond-to(medium-screens) {
       font-size: calc-em(14px, $baseFontSize);
       height: calc-em(24px, 14px);
+      width: 79%;
     } //medium-screens
     
     
     @include respond-to(wide-screens) {
       font-size: calc-em(18px, $baseFontSize);
       height: calc-em(32px, 18px);
+      width: 82%;
     } //wide-screens
     
   } //input
+  
+  form {
+    margin-bottom: 0;
+  }
+  
+  .input-append {
+    margin-bottom: 0;
+    button,
+    .btn {
+      @include background(#0F85CA);
+      @include border-radius(0);
+      border: none;
+      color: #FFF;
+      @include text-shadow(none);
+      font-size: calc-em(18px, $baseFontSize);
+      height: calc-em(40px, 18px);
+      @include box-shadow(none);
+      position: relative;
+      width: auto;
+      font-weight: 300;
+      
+      @include respond-to(medium-screens) {
+        font-size: calc-em(14px, $baseFontSize);
+        
+        
+      } //medium-screens
+      
+      @include respond-to(wide-screens) {
+        font-size: calc-em(18px, $baseFontSize);
+        
+      } //medium-screens
+      
+      
+    }
+  
+  }
+  
+  
 } //newsletter-signup
 
 .sponsors {

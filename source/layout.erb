@@ -31,7 +31,7 @@
       <div class="container">
         <div class="row-fluid">
           <div class="span6 intro">
-            <h2><span>Refresh is a community of like-minded</span> <span>designers, developers, and more interested</span> <span>in pushing Cincinnati forward. <%= link_to 'Join us.', '#' %></span></h2>
+            <h2><span>Refresh is a community of like-minded</span> <span>designers, developers, and more interested</span> <span>in pushing Cincinnati forward. <%= link_to 'Join us.', '#signup' %></span></h2>
           </div>
           <div class="span2 logo">
             <h1>RefreshCincy</h1>
@@ -50,13 +50,20 @@
     </div>
     <!-- /main-content -->
     
-    <footer class="site-footer">
+    <footer class="site-footer" id="signup">
       <div class="newsletter-signup">
         <div class="container">
           <div class="row-fluid">
             <h1 class="span5">Let's make Cincinnati great together.</h1>
             <div class="span3">
-              <input type='email' placeholder='Sign-up for our newsletter' />
+              
+              
+              <form action="http://helloample.createsend.com/t/y/s/phikyd/" method="post" id="subForm">
+              <div class="input-append">
+                <input type='email' placeholder='Sign-up for our newsletter' name="cm-phikyd-phikyd" id="phikyd-phikyd" ><input type="submit" class="btn" value="Go!" />              </div>
+              </form>
+              
+              
             </div>
           </div>
         </div>
