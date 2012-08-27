@@ -1,4 +1,3 @@
-//= require libs/jquery-1.7.0
-//= require libs/jquery.anystretch
-//= require application
+//= require libs/jquery-1.8.0
 //= require bootstrap
+//= require_tree ./public

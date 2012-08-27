@@ -200,3 +200,21 @@ $breakLarge: 979px;
 	text-indent: -9999px;
 	@include background(image-url($image-location) no-repeat top left);
 }
+
+@mixin ie7 {
+  * + html & { // Using browser hacks
+    @content;
+  }
+}
+
+@mixin ie8 {
+  html.ie8 & { // Using Paul Irish's conditional comments
+    @content;
+  }
+}
+
+@mixin ie9 {
+  html.ie9 & { // Using Paul Irish's conditional comments
+    @content;
+  }
+}
