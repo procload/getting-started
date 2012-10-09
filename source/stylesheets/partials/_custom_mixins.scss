@@ -25,13 +25,64 @@
 	}
 }
 
+@mixin col-border-left($border-width, $border-color) {
+  border-left: none;
+  border-right: $border-width solid $border-color;
+  @if $border-width == 1px {
+    $marginRight: ($gridColumnWidth / 2);
+    $paddingRight: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - $border-width;
+    padding-right: calc-em($paddingRight, $baseFontSize);
+    margin-right: calc-em($marginRight, $baseFontSize);
+  } @else {
+    $paddingRight: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - ($border-width / 2);
+    $marginRight: ($gridColumnWidth / 2) - ($border-width / 2);
+    padding-right: $paddingRight;
+    margin-right: $marginRight;
+  }
+
+} //col-border-right
+
+
+@mixin col-border-right($border-width, $border-color) {
+  border-left: none;
+  border-right: $border-width solid $border-color;
+  @if $border-width == 1px {
+    $marginRight: ($fluidGridColumnWidth / 2);
+    $paddingRight: (($fluidGridColumnWidth + ($fluidGridGutterWidth * 2)) / 2) - 1%;
+    padding-right: $paddingRight;
+  } @else {
+    $paddingRight: (($fluidGridColumnWidth + ($fluidGridGutterWidth * 2)) / 2) - (1% / 2);
+    $marginRight: ($fluidGridColumnWidth / 2) - ($border-width / 2);
+    padding-right: $paddingRight;
+    margin-right: $marginRight;
+  }
+
+} //col-border-right
+
+
+@mixin fluid-col-border-right($border-width, $border-color) {
+  border-left: none;
+  border-right: $border-width solid $border-color;
+  @if $border-width == 1px {
+    $marginRight: ($fluidGridColumnWidth / 2);
+    $paddingRight: (($fluidGridColumnWidth + ($fluidGridGutterWidth * 2)) / 2) - 1%;
+    padding-right: $paddingRight;
+  } @else {
+    $paddingRight: (($fluidGridColumnWidth + ($fluidGridGutterWidth * 2)) / 2) - (1% / 2);
+    $marginRight: ($fluidGridColumnWidth / 2) - ($border-width / 2);
+    padding-right: $paddingRight;
+    margin-right: $marginRight;
+  }
+} //col-border-right
+
 // ------------------------------------------- //
-//    MEDIA QUERIES   												 //
+//    MEDIA QUERIES                            //
 // ------------------------------------------- //
 
 $breakSmall: 320px;
 $breakMedium: 767px;
 $breakLarge: 979px;
+$breakXLarge: 1199px;
 
 @mixin respond-to($media) {
   @if $media == tiny-screens {
@@ -46,6 +97,9 @@ $breakLarge: 979px;
   @else if $media == wide-screens {
     @media only screen and (min-width: $breakLarge) { @content; }
   }
+  @else if $media == xwide-screens {
+    @media only screen and (min-width: $breakXLarge) { @content; }
+  }
 }
 
 @mixin retina-image($width, $height) {
@@ -54,6 +108,7 @@ $breakLarge: 979px;
     -webkit-background-size: $width $height;
   }
 }
+
 
 
 // ------------------------------------------- //
@@ -138,6 +193,12 @@ $breakLarge: 979px;
   background: $background-details;
 }
 
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 // ------------------------------------------------------ //
 //    Background/Colors           												//
 // ------------------------------------------------------ //
@@ -174,7 +235,7 @@ $breakLarge: 979px;
   border: {
   	style: solid;
   	width: 1px;
-  	top: {
+  	top: {  
   		color: #000;
   	}
   	right: {
@@ -188,6 +249,50 @@ $breakLarge: 979px;
   	}
   } 
 }
+
+// ------------------------------------------- //
+//    Animations      												 //
+// ------------------------------------------- //
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+  @-moz-keyframes #{$name} {
+    @content
+  }
+  @-ms-keyframes #{$name} {
+    @content
+  }
+  @-o-keyframes #{$name} {
+    @content
+  }
+  @keyframes #{$name} {
+    @content
+  }
+}
+
+@mixin animation($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -ms-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+/* Usage 
+**************************************************
+
+@include keyframes(move) {
+  0%   { left: 0; }
+  100% { left: 100px; }
+}
+
+.box {
+  @include animation(move 0.5s ease infinite alternate);
+}
+
+*/
 
 // ------------------------------------------- //
 //    IE-FIXES        												 //
