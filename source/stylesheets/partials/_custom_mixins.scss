@@ -86,24 +86,24 @@ $breakXLarge: 1199px;
 
 @mixin respond-to($media) {
   @if $media == tiny-screens {
-    @media only screen and (max-width: $breakSmall) { @content; }
+    @media (max-width: $breakSmall) { @content; }
   }
   @else if $media == small-screens {
-    @media only screen and (min-width: $breakSmall + 1) { @content; }
+    @media (min-width: $breakSmall + 1) { @content; }
   }
   @else if $media == medium-screens {
-    @media only screen and (min-width: $breakMedium + 1) { @content; }
+    @media (min-width: $breakMedium + 1) { @content; }
   }
   @else if $media == wide-screens {
-    @media only screen and (min-width: $breakLarge) { @content; }
+    @media (min-width: $breakLarge) { @content; }
   }
   @else if $media == xwide-screens {
-    @media only screen and (min-width: $breakXLarge) { @content; }
+    @media (min-width: $breakXLarge) { @content; }
   }
 }
 
 @mixin retina-image($width, $height) {
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  @media (-webkit-min-device-pixel-ratio: 2) {
     @content;
     -webkit-background-size: $width $height;
   }
