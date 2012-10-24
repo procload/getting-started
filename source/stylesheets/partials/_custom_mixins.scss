@@ -75,6 +75,102 @@
   }
 } //col-border-right
 
+
+// ------------------------------------------- //
+//    Buttons                                  //
+// ------------------------------------------- //
+
+@mixin create-button($color, $font-color: none, $border-radius: 4px, $icon: none) {
+  
+  // Checks if the background color is lighter than #C9C9C9, if so then change color to #333. If not, color is #FFF
+  $darkbg: lightness($color) < lightness(#C9C9C9);
+  @if $font-color == 'none' {
+    $font-color: if($darkbg, #FFF, #333);
+  }
+  $darkbg: lightness($color) < lightness(#C9C9C9);
+  
+  //Display and sizing configuration
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+  @include box-sizing(border-box);
+  display: inline-block;
+  position: relative;
+  margin-bottom: calc-em(5px, $baseFontSize);
+  -webkit-font-smoothing: antialiased;
+  
+  //Type Configuration
+  color: $font-color;
+  font-family: $baseFontFamily;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-decoration: none;
+  @if $font-color == #FFF {
+    @include text-shadow(rgba(0,0,0,.3) 0 -1px 0);
+  } @else {
+    @include text-shadow(rgba(0,0,0,.08) 0 -1px 0, rgba(255,255,255,1) 0 1px 0);
+  }
+  
+  //Background and Border Configuration
+  @if $icon != 'none' {
+    padding: .35em 1.25em .35em 2.4em;
+    @include background($icon, $color);
+    @include background($icon, linear-gradient($color darken($color, 5%)));
+  } @else {
+    padding: .35em 1.25em;
+    @include background($color);
+    @include background-image(linear-gradient($color darken($color, 15%)));
+  }
+  @include border-radius($border-radius);
+  @include box-shadow((inset rgba(255,255,255, .3) 0 1px 0, rgba(0,0,0,.2) 0 2px 3px));
+  
+  //Border Configuration
+  border: {
+    width: 1px;
+    style: solid;
+    top: {
+      color: darken($color, 15%);
+    }                        
+    right: {                 
+      color: darken($color, 20%);
+    }                        
+    bottom: {                
+      color: darken($color, 20%);
+    }                        
+    left: {                  
+      color: darken($color, 20%);
+    }
+  }
+  
+  //Transition Configuration
+  @include transition-duration(.3s);
+  
+  &:visited {
+    color: $font-color;
+  }
+  
+  &:hover,
+  &:focus,
+  &:active {
+    color: $font-color;
+    //Background and Border Configuration
+    @if $icon != 'none' {
+      border: 1px solid darken($color, 15%);
+      @include background($icon, darken($color, 5%));
+      @include background($icon, linear-gradient(darken($color, 5%) darken($color, 23%)));
+    } @else {
+      border: 1px solid darken($color, 15%);
+      @include background(darken($color, 5%));
+      @include background-image(linear-gradient(darken($color, 5%) darken($color, 23%)));
+    }
+  }
+ 
+  &:active {
+    border: 1px solid darken($color, 23%);
+    color: darken($font-color, 5%);
+    @include box-shadow((inset rgba(0,0,0, .3) 0 1px 4px));
+  }
+}
+
 // ------------------------------------------- //
 //    MEDIA QUERIES                            //
 // ------------------------------------------- //

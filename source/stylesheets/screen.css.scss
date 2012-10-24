@@ -42,87 +42,6 @@ p {
 
 // Header
 // --------------------------------------------------
-.site-header {
-  border-bottom: 5px solid $borderColor;
-  @include background(transparent image-url('backgrounds/bg-header.png') no-repeat top left);
-  background-size: cover;
-  padding: calc-em(26px, $baseFontSize) 0;
-  
-  
-  .intro {
-    @include respond-to(medium-screens) {
-      float: none;
-      width: 100%;
-    } //medium-screens
-    @include respond-to(wide-screens) {
-      float: left;
-      width: 71.154%;
-    } //wide-screens
-    
-  } //intro
-  
-  
-  .logo {
-    @include respond-to(medium-screens) {
-      float: none;
-      margin: 0 auto;
-      width: 100%;
-    } //medium-screens
-    @include respond-to(wide-screens) {
-      float: left;
-      margin-left: 3.846%;
-      width: 21.154%;
-    } //wide-screens
-    
-  } //logo
-  
-
-  h1 {
-    @include replace-text(279px, 171px, image-url('img-logo.png') no-repeat top left);
-    margin: 0 auto;
-    margin-top: calc-em(13px, $baseFontSize);
-  } //h1
-  
-  h2 {
-   
-    color: #FFF;
-    line-height: 1.75em;
-    font-size: calc-em(18px, $baseFontSize);
-    background: rgba(0,0,0,.7);
-    padding: calc-em(10px, 18px);
-    
-    
-    @include respond-to(medium-screens) {
-      font-size: calc-em(28px, $baseFontSize);
-      padding: 0;
-      background: none;
-    } //medium-screens
-    
-    @include respond-to(wide-screens) {
-      font-size: calc-em(34px, $baseFontSize);
-    }
-
-   span {
-    
-    @include respond-to(medium-screens) {
-      display: block;
-      margin: calc-em(13px, 34px) 0;
-      padding-left: calc-em(8px, 34px);
-      background: rgba(0,0,0,.7);
-      
-    } //medium-screens
-    
-   }
-   a {
-     &:hover {
-       color: $linkColor;
-       text-decoration: none;
-     }
-    } //a
-    
-     
-  } //h2
-} //site-header 
 
 
 // Main Content
@@ -133,306 +52,144 @@ p {
   
   h1 {
    color: $headlineTextColor;
-   text-align: center;
    font-size: calc-em(48px, $baseFontSize);
-   line-height: calc-em(48px, 48px);
+   line-height: 1.25em;
+  }
+  
+  .table-esque {
+    @include border-radius(4px);
+    border: 1px solid #DDD;
+    font-size: calc-em(14px, $baseFontSize);
+    font-family: 'Helvetica';
+    position: relative;
+    overflow: hidden;
+    .table-row {
+      background: #FFF;
+      @include group;
+
+      border-bottom: 1px solid #DDD;
+      
+      &:nth-child(odd) {
+        background: #F9F9F9; 
+      }
+      .table-cell {
+        border-right: 1px solid #DDD;
+        
+        padding: calc-em(10px, $baseFontSize) 0;
+        @include equalize-column;
+        float: left;
+        width: 19.9%;
+        
+        &:last-of-type {
+          border-right: none;
+        } //last-child
+      } //table-cell
+      
+      > ul {
+        margin: 0;
+        padding: 0;
+        clear: both;
+        border-top: 1px solid #DDD;
+        
+        .table-row {
+          &:last-child {
+            border-bottom: none; 
+          } //last-child
+          
+          .table-cell {
+            &:first-child {
+              .cell-content {
+                padding-left: 20px;
+                @include background(image-url('parts/icons/ico-nested.png') no-repeat left);
+              } //cell-content
+            } //first-child
+          } //table-cell
+          
+          > ul {
+            .table-row {
+              .table-cell {
+                &:first-child {
+                  .cell-content {
+                    padding-left: 40px;
+                    @include background(image-url('parts/icons/ico-nested-nested.png') no-repeat left);
+                  }
+                } //first-child
+              } //table-cell
+              
+              > ul {
+                .table-row {
+                  .table-cell {
+                    &:first-child {
+                      .cell-content {
+                        padding-left: 60px;
+                        @include background(image-url('parts/icons/ico-nested-nested-nested.png') no-repeat left);
+                      }
+                    } //first-child
+                  } //table-cell
+                }
+                
+              } //ul
+              
+              
+            } //table-row
+          } //ul
+        } //table-row
+      } //ul
+    } //table-row
+    
+    .table-header {
+      @include border-radius(4px 4px 0 0);
+      background: #F9F9F9;
+      width: 100%;
+      .table-cell {
+        &:first-child {
+          @include border-radius(4px 0 0 0); 
+        }
+        &:last-child {
+          @include border-radius(0 4px 0 0);
+        }
+      }
+    } //table-header
+    
+    .table-body {
+      margin: 0;
+      padding: 0;
+      
+      
+      .table-row {
+        
+        
+        &:last-child {
+          .table-cell {
+            border-bottom: none;
+            &:first-child {
+              @include border-radius(0 0 0 4px); 
+            } //first-child
+            &:last-child {
+              @include border-radius(0 0 4px 0);
+            } //last-child
+          } //table-cell
+        } //last-child
+      } //table-row
+    } //table-body
+    
+
+    
+
+    
+    
+    .table-actions {
+      text-align: center;
+      a {
+        display: inline-block; 
+      }
+    }
+    
+    
   }
   
 } //main-content 
 
-.about-refresh {
-  margin-top: calc-em(30px, $baseFontSize);
-  margin-bottom: calc-em(60px, $baseFontSize);
-  p {
-   font-size: calc-em(18px, $baseFontSize); 
-   line-height: calc-em(27px, 18px);
-  } //p
-} //about-refresh
-
-.refresh-background {
-  margin-left: calc-em(90px, $baseFontSize);
-  margin-bottom: calc-em(30px, $baseFontSize);
-  @include respond-to(medium-screens) {
-    margin-bottom: 0;
-  } //medium-screens
-  
-}
-
-
-
-
-.refresh-audience {
-  
-  display: block;
-  width: 90%;
-  float: none;
-  padding: calc-em(15px, $baseFontSize);
-  
-    
-  @include respond-to(medium-screens) {
-    float: right;
-    padding: calc-em(10px, $baseFontSize);
-    width: calc-em(230px, $baseFontSize);
-  } //medium-screens
-  
-  @include respond-to(wide-screens) {
-
-    padding: calc-em(15px, $baseFontSize);
-    width: calc-em(240px, $baseFontSize);
-    
-    margin-right: calc-em(30px, $baseFontSize);
-  } //wide-screen
-  
-  ul {
-   margin: 0;
-   @include group;
-  }
-  
-  li {
-   display: inline-block;
-   margin: 0 0 calc-em(26px, 18px);
-   padding-left: calc-em(35px, 18px);
-   line-height: calc-em(27px, 18px);
-   font-weight: 100;
-   font-size: calc-em(18px, $baseFontSize);
-   
-   &.designers {
-     @extend .icons-ico-designer;
-     float: left;
-     clear: both;
-   }
-   
-   &.makers {
-     @extend .icons-ico-maker;
-     float: right;
-   }
-   
-   &.developers {
-     @extend .icons-ico-developer;
-     float: left;
-     clear: both;
-   }
-   
-   &.writers {
-     @extend .icons-ico-writer;
-     float: right;
-   }
-   
-   &.engineers {
-     @extend .icons-ico-engineer;
-     float: left;
-     clear: both;
-     margin-bottom: calc-em(8px, $baseFontSize);
-   }
-   
-   &.editors {
-     @extend .icons-ico-editor;
-     float: right;
-     margin-bottom: calc-em(8px, $baseFontSize);
-   }
-   
-   &.in-between {
-     clear: both;
-     width: 100%;
-     color: $headlineTextColor;
-     font-weight: 100;
-     text-align: center;
-     padding-left: 0;
-     font-size: calc-em(22px, $baseFontSize);
-     margin-bottom: 0;
-    } 
-  }
-  
-}
-
-.next-event {
-  background: #FFF;
-  padding: calc-em(40px, $baseFontSize) 0;
-  border-top: 1px solid #D8D8D8;
-  .container {
-    @include respond-to(medium-screens) {
-      @include background(image-url('backgrounds/bg-event.png') no-repeat right);
-    } //medium-screens
-     
-  } //container
-  h2 {
-   color: $headlineTextColor;
-   font-size: calc-em(28px, $baseFontSize); 
-   margin-bottom: calc-em(14px, 28px);
-  } //h2
-  h3 {
-    font-size: calc-em(18px, $baseFontSize);
-    padding-left: calc-em(30px, 18px);
-  }
-  p {
-   font-size: calc-em(14px, $baseFontSize); 
-  }
-  
-  .event-description {
-    margin-bottom: calc-em(13px, $baseFontSize);
-    h3 {
-      @extend .icons-ico-event;
-      line-height: calc-em(18px, $baseFontSize);
-      margin-bottom: calc-em(6px, $baseFontSize);
-    }
-  }
-  
-  .event-location,
-  .event-time {
-    h3 {
-     font-size: calc-em(16px, $baseFontSize); 
-     line-height: calc-em(18px, $baseFontSize);
-     margin-bottom: calc-em(6px, $baseFontSize);
-     
-    }
-  }
-  
-  .event-location {
-    h3 {
-      @extend .icons-ico-location; 
-    }
-    margin-bottom: calc-em(15px, $baseFontSize);
-    @include respond-to(medium-screens) {
-      float: none;
-      display: block;
-      width: 100%;
-    } //medium-screens
-    
-    @include respond-to(wide-screens) {
-      float: left;
-      margin-bottom: 0;
-      width: 21.154%;
-    } //wide-screens
-  }
-  
-  .event-time {
-    h3 {
-      @extend .icons-ico-date; 
-    }
-    @include respond-to(medium-screens) {
-      margin-left: 0;
-      float: none;
-      display: block;
-      width: 100%;
-    } //medium-screens
-    
-    @include respond-to(wide-screens) {
-      float: left;
-      width: 21.154%;
-    } //wide-screens
-  } //event-time
-} //next-event
-
 
 // Footer
 // --------------------------------------------------
-
-.site-footer {
-  background: #1a1a1a;
-  color: #FFF;
-} //site-footer
-
-.newsletter-signup {
-  background: #00b3f6;
-
-  padding: calc-em(15px, $baseFontSize) 0;
-  
-  h1 {
-    color: #FFF; 
-    font-size: calc-em(32px, $baseFontSize);
-    line-height: calc-em(40px, 32px);
-    margin-bottom: calc-em(20px, 32px);
-    @include respond-to(medium-screens) {
-      font-size: calc-em(24px, $baseFontSize);
-      margin-bottom: 0;
-    } //medium-screens
-    
-  
-    @include respond-to(wide-screens) {
-      font-size: calc-em(32px, $baseFontSize);
-      width: calc-em(240px, $baseFontSize);
-    } //wide-screen
-    
-  } //h1
-  
-  input {
-    @include box-shadow(none);
-    border: none;
-    @include border-radius(0);
-    font-size: calc-em(18px, $baseFontSize);
-    font-weight: 100;
-    height: calc-em(32px, 18px);
-    width: 82%;
-    margin: 0;
-    
-    @include respond-to(medium-screens) {
-      font-size: calc-em(14px, $baseFontSize);
-      height: calc-em(24px, 14px);
-      width: 79%;
-    } //medium-screens
-    
-    
-    @include respond-to(wide-screens) {
-      font-size: calc-em(18px, $baseFontSize);
-      height: calc-em(32px, 18px);
-      width: 82%;
-    } //wide-screens
-    
-  } //input
-  
-  form {
-    margin-bottom: 0;
-  }
-  
-  .input-append {
-    margin-bottom: 0;
-    button,
-    .btn {
-      @include background(#0F85CA);
-      @include border-radius(0);
-      border: none;
-      color: #FFF;
-      @include text-shadow(none);
-      font-size: calc-em(18px, $baseFontSize);
-      height: calc-em(40px, 18px);
-      @include box-shadow(none);
-      position: relative;
-      width: auto;
-      font-weight: 300;
-      
-      @include respond-to(medium-screens) {
-        font-size: calc-em(14px, $baseFontSize);
-        
-        
-      } //medium-screens
-      
-      @include respond-to(wide-screens) {
-        font-size: calc-em(18px, $baseFontSize);
-        
-      } //medium-screens
-      
-      
-    }
-  
-  }
-  
-  
-} //newsletter-signup
-
-.sponsors {
-  padding: calc-em(40px, $baseFontSize) 0 calc-em(10px, $baseFontSize) 0;
-  span {
-    color: #C6C6C6;
-    font-size: calc-em(11px, $baseFontSize);
-  }
-}
-
-
-// Bootstrap Overrides
-// --------------------------------------------------
-.well {
-  background: rgba(0,0,0,.05);
-  border: 4px solid #FFF;
-  @include border-radius(4px);
-  @include box-shadow(rgba(0,0,0,.3) 0 0 3px);
-}
