@@ -15,3 +15,5 @@ helpers do
   end
   
 end
+
+page "*", :layout => "public"
