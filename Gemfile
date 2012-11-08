@@ -1,8 +1,27 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem "coffee_cup"
-gem "sass", "~> 3.2.1"
-gem "middleman", "~> 3.0.6"
-gem 'middleman-smusher'
-gem "bootstrap-sass", "~> 2.1.0.1"
-gem "compass", "~> 0.12.2"
+#-------------- Framework
+gem 'rails', '3.2.8'
+gem 'jquery-rails'
+
+#-------------- Database
+gem 'sqlite3'
+
+#-------------- Assets
+group :assets do
+  gem 'sass-rails',       '~> 3.2.5'
+  gem 'coffee-rails',     '~> 3.2.2'
+  gem 'uglifier',         '>= 1.0.3'
+  gem 'compass-rails',    '~> 1.0.3'
+  gem 'bootstrap-sass',   '~> 2.1.1.0'
+  gem 'coffee_cup'
+end
+
+group :development do
+  gem 'sqlite3'
+  gem 'capistrano'
+  gem 'guard'
+  gem 'rack-livereload'
+  gem 'guard-livereload'
+  
+end

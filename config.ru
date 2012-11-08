@@ -1,4 +1,4 @@
-require 'rubygems'
-require 'middleman'
+# This file is used by Rack-based servers to start the application.
 
-run Middleman.server
+require ::File.expand_path('../config/environment',  __FILE__)
+run AmpleRails::Application
