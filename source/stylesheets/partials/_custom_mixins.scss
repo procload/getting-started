@@ -12,7 +12,7 @@
 	padding-bottom: 99999px; 
 }
 
-@mixin group() {
+%group {
 	*zoom:1;
 	&:before,
 	&:after {
@@ -199,7 +199,8 @@ $breakXLarge: 1199px;
 }
 
 @mixin retina-image($width, $height) {
-  @media (-webkit-min-device-pixel-ratio: 2) {
+  only screen and (-webkit-min-device-pixel-ratio: 2), 
+  only screen and (min-resolution: 192dpi) {
     @content;
     -webkit-background-size: $width $height;
   }
