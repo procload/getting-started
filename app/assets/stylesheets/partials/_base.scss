@@ -283,9 +283,6 @@ $fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768);
 // Twitter Bootstrap
 // -------------------------
 @import "bootstrap";
-@import "bootstrap/overrides";
-@import "bootstrap/datepicker";
-@import "bootstrap/timepicker";
 
 // Compass
 // -------------------------
@@ -294,6 +291,7 @@ $fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768);
 // Mixins
 // -------------------------
 @import "partials/custom_mixins";
+@import "partials/media_queries";
 
 // Modules
 // -------------------------
