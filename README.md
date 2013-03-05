@@ -6,75 +6,68 @@
 
 ###Get the repo up and running locally:
 
-1. #####Create a new repo#####
-
-2. #####Clone the Getting Started repo#####
+1. #####Clone the Getting Started Repo into Your New Project#####
 
   ```
-  $ git clone git@github.com:ample/ample-getting-started.git
+  % git clone git@github.com:ample/ample-getting-started.git my-fancy-new-project
   ```
-3. #####Rename the cloned directory and cd into it#####
 
-  ```
-    $ mv ample-getting-started your-project
-    $ cd your-project
-    ```
-4. #####Remove the git directory#####
+2. #####Remove the git directory#####
 
   ```
     $ rm -rf .git
   ```
-5. #####Re-init the git repo#####
+3. #####Re-init the git repo#####
 
   ```
     $ git init
   ```
-6. #####Add the new origin#####
+4. #####Add the new origin#####
 
   ```
     $ git remote add origin git@github.com:ample/your-project.git
   ```
-7. #####Add the new files and commit#####
+5. #####Add the new files and commit#####
 
   ```
   $ git add .
   $ git commit -m "Initial commit."
   ```
-8. #####Create a new gemset with the name of your project#####
+6. #####Create a new gemset with the name of your project#####
 
   ```
   $ echo 'rvm 1.9.3@your-project --create' > .rvmrc
   ```
-9. #####Move out of the directory and then back in to initialize your gemset#####
+7. #####Move out of the directory and then back in to initialize your gemset#####
 
   ```
   $ cd ..
   $ cd your-project
     ```
-10. #####Install bundler#####
+8. #####Install bundler#####
 
   ```
   $ gem install bundler
   ```
-11. #####Install the project's gems with bundler
+9. #####Install the project's gems with bundler
 
   ```
   $ bundle install
   ```
 
-12. #####Install Powder
+10. #####Install Powder
 
   ```
   $ gem install powder
   ```
 
-13. #####Link Powder to Your Current Project
+11. #####Link Powder to Your Current Project
 
   ```
   $ powder link
   ```
 
-14. #####Open Your Project in Your Browser
+12. #####Open Your Project in Your Browser
 
   ```
   $ powder open
