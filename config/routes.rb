@@ -2,6 +2,6 @@ AmpleRails::Application.routes.draw do
   
   ###---------------------------------------------------- Static Routes
   
-  get 'static/:action', :to => 'application'
+  match 'static/:permalink', :to => 'pages#static'
   
 end

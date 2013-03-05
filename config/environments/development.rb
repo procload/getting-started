@@ -34,11 +34,5 @@ AmpleRails::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-  
-  # Turns debug mode on which allows Chrome to see SCSS
-  config.sass[:debug_info] = true
-
-  # Configure Rack-LiveReload
-  config.middleware.insert_before(Rack::Lock, Rack::LiveReload)
 
 end
