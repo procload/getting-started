@@ -12,7 +12,7 @@
   % git clone git@github.com:ample/ample-getting-started.git my-fancy-new-project
   ```
 
-2. #####Remove the git directory#####
+2. #####Move into Your New Project and Remove the git Directory#####
 
   ```
     $ rm -rf .git
@@ -49,25 +49,30 @@
   ```
   $ gem install bundler
   ```
-9. #####Install the project's gems with bundler
+9. #####Initialize and Update Ample Admin#####
+
+  ```
+  $ git submodule init && git submodule update
+  ```
+10. #####Install the project's gems with bundler
 
   ```
   $ bundle install
   ```
 
-10. #####Install Powder
+11. #####Install Powder
 
   ```
   $ gem install powder
   ```
 
-11. #####Link Powder to Your Current Project
+12. #####Link Powder to Your Current Project
 
   ```
   $ powder link
   ```
 
-12. #####Open Your Project in Your Browser
+13. #####Open Your Project in Your Browser
 
   ```
   $ powder open
