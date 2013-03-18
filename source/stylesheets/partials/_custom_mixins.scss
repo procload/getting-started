@@ -198,13 +198,13 @@ $breakXLarge: 1199px;
   }
 }
 
-@mixin retina-image($width, $height) {
-  only screen and (-webkit-min-device-pixel-ratio: 2), 
-  only screen and (min-resolution: 192dpi) {
-    @content;
-    -webkit-background-size: $width $height;
-  }
-}
+// @mixin retina-image($width, $height) {
+//   only screen and (-webkit-min-device-pixel-ratio: 2), 
+//   only screen and (min-resolution: 192dpi) {
+//     @content;
+//     -webkit-background-size: $width $height;
+//   }
+// }
 
 
 

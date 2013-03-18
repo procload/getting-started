@@ -6,24 +6,24 @@
 // --------------------------------------------------
 
 // Background
-$backgroundColor:                  #FFF;
+$background-color:                 #FFF;
 
 // Links
-$linkColor:                        #00b3f6;
-$linkColorHover:                   darken($linkColor, 15%);
+$link-color:                        #00b3f6;
+$link-color-hover:                   darken($link-color, 15%);
 
 // Grays
 $black:                            #000;
-$grayDarker:                       #222;
-$grayDark:                         #333;
+$gray-darker:                       #222;
+$gray-dark:                         #333;
 $gray:                             #555;
-$grayLight:                        #999;
-$grayLighter:                      #eee;
+$gray-light:                        #999;
+$gray-lighter:                      #eee;
 $white:                            #fff;
       
 // Accent colors                   
 $blue:                             #049cdb;
-$blueDark:                         #0064cd;
+$blue-dark:                         #0064cd;
 $green:                            #46a546;
 $red:                              #9d261d;
 $yellow:                           #ffc40d;
@@ -32,68 +32,49 @@ $pink:                             #c3325f;
 $purple:                           #7a43b6;
       
 // Typography                    
-$baseFontSize:                     15px;
-$baseFontFamily:                   "museo-sans", Helvetica, Arial, sans-serif;
-$baseLineHeight:                   22px;
-$textColor:                        #0F0F0F;
-$headlineTextColor:                #00b3f6;
-
-// Buttons                         
-$primaryButtonBackground:          $linkColor;
+$base-font-size:                     15px;
+$base-font-family:                   "museo-sans", Helvetica, Arial, sans-serif;
+$base-line-height:                   22px;
+$text-color:                        #0F0F0F;
+$headline-text-color:                #00b3f6;
 
 //Borders
-$borderColor:                      #1a1a1a;
+$border-color:                      #1a1a1a;
 
 // COMPONENT VARIABLES
 // --------------------------------------------------
 
 // Input placeholder text color
-$placeholderText:                 $grayLight;
+$placeholder-text:                 $gray-light;
 
 // HR border color
-$hrBorder:                        $grayLighter;
-
-// Navbar
-$navbarHeight:                    40px;
-$navbarBackground:                $grayDarker;
-$navbarBackgroundHighlight:       $grayDark;
-$navbarLinkBackgroundHover:       transparent;
-
-$navbarText:                      $grayLight;
-$navbarLinkColor:                 $grayLight;
-$navbarLinkColorHover:            $white;
+$hr-border:                        $gray-lighter;
 
 // Form states and alerts
-$warningText:                     #c09853;
-$warningBackground:               #fcf8e3;
-$warningBorder:                   darken(adjust-hue($warningBackground, -10), 3%);
+$warning-text:                     #c09853;
+$warning-background:               #fcf8e3;
+$warning-border:                   darken(adjust-hue($warning-background, -10), 3%);
           
-$errorText:                       #b94a48;
-$errorBackground:                 #f2dede;
-$errorBorder:                     darken(adjust-hue($errorBackground, -10), 3%);
+$error-text:                       #b94a48;
+$error-background:                 #f2dede;
+$error-border:                     darken(adjust-hue($error-background, -10), 3%);
           
-$successText:                     #468847;
-$successBackground:               #dff0d8;
-$successBorder:                   darken(adjust-hue($successBackground, -10), 5%);
+$success-text:                     #468847;
+$success-background:               #dff0d8;
+$success-border:                   darken(adjust-hue($success-background, -10), 5%);
           
-$infoText:                        #3a87ad;
-$infoBackground:                  #d9edf7;
-$infoBorder:                      darken(adjust-hue($infoBackground, -10), 7%);
+$info-text:                        #3a87ad;
+$info-background:                  #d9edf7;
+$info-border:                      darken(adjust-hue($info-background, -10), 7%);
 
 
-// GRID
+// SUSY GRID
 // --------------------------------------------------
- 
-// Default 940px grid
-$gridColumns:             8;
-$gridColumnWidth:         90px;
-$gridGutterWidth:         40px;
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
 
-// Fluid grid
-$fluidGridColumnWidth:    8.6538462%;
-$fluidGridGutterWidth:    3.8461538%;
-
+$total-columns: 12;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
 
 
 // Imports & Includes
@@ -106,9 +87,8 @@ $fluidGridGutterWidth:    3.8461538%;
 //Compass Mixins
 @import "compass/css3";
 
-// Twitter Bootstrap
-@import "bootstrap";
-@import "bootstrap-responsive";
+//Susy Grid
+@import 'susy';
 
 @import "partials/font_awesome";
 
