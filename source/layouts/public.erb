@@ -12,10 +12,12 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
+  
+  <%= stylesheet_link_tag "libs/modernizr" %>
   <%= stylesheet_link_tag "screen" %>
-  <%= javascript_include_tag "public" %>
-  <script type="text/javascript" src="//use.typekit.net/clx8wzz.js"></script>
+  
+  <!-- Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/ksh5vfs.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </head>
@@ -25,7 +27,7 @@
   </header><!-- site-header -->
 
   <main class="main-content">
-      <%= yield %>
+    <%= yield %>
   </main><!-- /main-content -->
 
   <footer class="site-footer" id="signup">
@@ -33,6 +35,7 @@
     </section><!-- /footer-content -->
   </footer><!-- /site-footer -->
 
+  <%= javascript_include_tag "public" %>
   <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

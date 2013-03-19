@@ -1,94 +1,93 @@
-// Variables & Setup
-// **************************************************
-// **************************************************
-
 // GLOBAL VALUES
 // --------------------------------------------------
 
 // Background
-$background-color:                 #FFF;
+$background-color:                   #FFF;
 
 // Links
-$link-color:                        #00b3f6;
+$link-color:                         #00b3f6;
 $link-color-hover:                   darken($link-color, 15%);
 
 // Grays
-$black:                            #000;
-$gray-darker:                       #222;
-$gray-dark:                         #333;
-$gray:                             #555;
-$gray-light:                        #999;
-$gray-lighter:                      #eee;
-$white:                            #fff;
+$black:                              #000;
+$gray-darker:                        #222;
+$gray-dark:                          #333;
+$gray:                               #555;
+$gray-light:                         #999;
+$gray-lighter:                       #eee;
+$white:                              #fff;
       
 // Accent colors                   
-$blue:                             #049cdb;
-$blue-dark:                         #0064cd;
-$green:                            #46a546;
-$red:                              #9d261d;
-$yellow:                           #ffc40d;
-$orange:                           #f89406;
-$pink:                             #c3325f;
-$purple:                           #7a43b6;
+$blue:                               #049cdb;
+$blue-dark:                          #0064cd;
+$green:                              #46a546;
+$red:                                #9d261d;
+$yellow:                             #ffc40d;
+$orange:                             #f89406;
+$pink:                               #c3325f;
+$purple:                             #7a43b6;
       
 // Typography                    
-$base-font-size:                     15px;
-$base-font-family:                   "museo-sans", Helvetica, Arial, sans-serif;
-$base-line-height:                   22px;
-$text-color:                        #0F0F0F;
-$headline-text-color:                #00b3f6;
+$base-font-size:                     16px;
+$base-font-family:                   "proxima-nova", Helvetica, Arial, sans-serif;
+$base-line-height:                   1.5;
+$text-color:                         $gray-dark;
+$headline-text-color:                $link-color;
 
 //Borders
-$border-color:                      #1a1a1a;
+$border-color:                       #1a1a1a;
 
 // COMPONENT VARIABLES
 // --------------------------------------------------
 
 // Input placeholder text color
-$placeholder-text:                 $gray-light;
-
-// HR border color
-$hr-border:                        $gray-lighter;
-
-// Form states and alerts
-$warning-text:                     #c09853;
-$warning-background:               #fcf8e3;
-$warning-border:                   darken(adjust-hue($warning-background, -10), 3%);
-          
-$error-text:                       #b94a48;
-$error-background:                 #f2dede;
-$error-border:                     darken(adjust-hue($error-background, -10), 3%);
-          
-$success-text:                     #468847;
-$success-background:               #dff0d8;
-$success-border:                   darken(adjust-hue($success-background, -10), 5%);
-          
-$info-text:                        #3a87ad;
-$info-background:                  #d9edf7;
-$info-border:                      darken(adjust-hue($info-background, -10), 7%);
+$placeholder-text:                   $gray-light;
+  
+// HR border color  
+$hr-border:                          $gray-lighter;
+  
+// Form states and alerts  
+$warning-text:                       #c09853;
+$warning-background:                 #fcf8e3;
+$warning-border:                     darken(adjust-hue($warning-background, -10), 3%);
+            
+$error-text:                         #b94a48;
+$error-background:                   #f2dede;
+$error-border:                       darken(adjust-hue($error-background, -10), 3%);
+            
+$success-text:                       #468847;
+$success-background:                 #dff0d8;
+$success-border:                     darken(adjust-hue($success-background, -10), 5%);
+            
+$info-text:                          #3a87ad;
+$info-background:                    #d9edf7;
+$info-border:                        darken(adjust-hue($info-background, -10), 7%);
 
 
 // SUSY GRID
 // --------------------------------------------------
 
-$total-columns: 12;
-$column-width: 4em;
-$gutter-width: 1em;
-$grid-padding: $gutter-width;
+$total-columns:                      12;
+$column-width:                       4em;
+$gutter-width:                       1em;
+$grid-padding:                       $gutter-width;
 
 
-// Imports & Includes
-// **************************************************
-// **************************************************
+// IMPORTS & INCLUDES
+// --------------------------------------------------
 
-// My Mixins
-@import "partials/custom_mixins";
+//Normalize
+@import "normalize";
 
 //Compass Mixins
 @import "compass/css3";
 
+//Font Awesome
+@import "font_awesome";
+
+// My Mixins
+@import "custom_mixins";
+
 //Susy Grid
 @import 'susy';
-
-@import "partials/font_awesome";
 

@@ -1,114 +1,51 @@
 @import 'partials/base';
 
-
 // Global
 // --------------------------------------------------
-
 body {
   background: $background-color image-url('backgrounds/bg-page.png') repeat;
   color: $text-color;
   line-height: 1.5;
   font-size: 100%;
   font-family: $base-font-family;
-  border-top: 5px solid $border-color;
 }
 
-.container {
-  padding: 0 calc-em(20px, $base-font-size);
-  
-  @include respond-to(medium-screens) {
-    padding: 0;
-  } //medium-screens
-}
 
-// Sprites
+// Container
 // --------------------------------------------------
-$icons-spacing: 30px;
-$icons-ico-event-spacing: 40px;
-@import "../images/parts/icons/*.png";
-@include all-icons-sprites;
+%container {
+  @include container;
+} //container
 
 
 // Typography
 // --------------------------------------------------
-
-h1, h2 {
-  font-weight: 100;
+h1, h2, h3,
+h4, h5, h6 {
+  line-height: 1.25;
 }
 
 p {
   font-weight: 300;
 }
 
+
 // Header
 // --------------------------------------------------
+.site-header {
+
+}
 
 
 // Main Content
 // --------------------------------------------------
-
 .main-content {
-  padding: calc-em(50px, $base-font-size) 0 0 0;
-  
-  h1 {
-   color: $headline-text-color;
-   font-size: calc-em(48px, $base-font-size);
-   line-height: 1.25em;
-  }
   
 } //main-content 
 
 
 // Footer
 // --------------------------------------------------
+.site-footer {
 
-
-
-// Your standard form button.
-//
-// :hover    - Highlights when hovering.
-// :disabled - Dims the button when disabled.
-// .primary  - Indicates button is the primary action.
-// .smaller  - A smaller button
-//
-// Styleguide 5.1.1
-button {
-  padding: 5px 15px;
-  line-height: normal;
-  font-family: "Helvetica Neue", Helvetica;
-  font-size: 12px;
-  font-weight: bold;
-  color: #666;
-  @include text-shadow(0 1px rgba(255, 255, 255, 0.9));
-  @include border-radius(3px);
-  border: 1px solid #ddd;
-  border-bottom-color: #bbb;
-  background-color: #f5f5f5;
-  @include background-image(linear-gradient(#f5f5f5, #e5e5e5));
-  @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.15));
-  cursor: pointer;
-
-  &.primary, &.primary:hover {
-    color: #fff;
-    @include text-shadow(0 -1px 0 rgba(0, 0, 0, 0.4));
-    border-color: #74bb5a;
-    border-bottom-color: #509338;
-    background-color: #8add6d;
-    @include background-image(linear-gradient(#8add6d, #60b044));
-    @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
-  }
-  &.smaller {
-    font-size: 11px;
-    padding: 4px 7px;
-  }
-  &:hover {
-    color: #337797;
-    background-color: #f0f7fa;
-    @include background-image(linear-gradient(#f0f7fa, #d8eaf2));
-    border-color: #cbe3ee;
-    border-bottom-color: #97c7dd;
-  }
-  &:disabled {
-    opacity: 0.5;
-  }
 }
