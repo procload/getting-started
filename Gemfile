@@ -1,5 +1,7 @@
 source :rubygems
 
+gem "susy"
+
 gem "middleman"
 gem 'middleman-smusher'
 

@@ -11,6 +11,16 @@
 	padding-bottom: 99999px; 
 }
 
+%container {
+  @extend .container;
+}
+
+%container-fluid {
+  @extend .container-fluid; 
+  max-width: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+  margin: 0 auto;
+}
+
 %group {
 	*zoom:1;
 	&:before,

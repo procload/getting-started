@@ -4,19 +4,12 @@
 // Global
 // --------------------------------------------------
 body {
-  background: $background-color image-url('backgrounds/bg-page.png') repeat;
-  color: $text-color;
+  background: $bodyBackground image-url('backgrounds/bg-page.png') repeat;
+  color: $textColor;
   line-height: 1.5;
   font-size: 100%;
-  font-family: $base-font-family;
+  font-family: $baseFontFamily;
 }
-
-
-// Container
-// --------------------------------------------------
-%container {
-  
-} //container
 
 
 // Typography
@@ -40,9 +33,46 @@ p {
 
 // Main Content
 // --------------------------------------------------
-.main-content {
+// .main-content {
+//   @extend %container-fluid;
   
-} //main-content 
+//   .content {
+//     @extend .row-fluid;  
+//   }
+//   .sidebar {
+//     @include respond-to(47em) {
+//       float: left;
+//       @extend .span3; // Cannot use this type of @extend within a media query
+//     }
+//   } //sidebar
+
+//   .main-article {
+//     @include respond-to(47em) {
+//       float: left;
+//       @extend .span8;   // Cannot use this type of @extend within a media query
+//       @extend .offset1; // Cannot use this type of @extend within a media query
+//     }
+//   } //main-article
+// } //main-content
+
+.main-content {
+  @include container;
+  .content {
+    @extend %group;
+  }
+  .sidebar {
+    @include respond-to(47em) {
+      @include span-columns(3, 12);
+    }
+  } //sidebar
+  .main-article {
+    @include respond-to(47em) {
+      @include span-columns(8 omega, 12);
+    }
+  } //main-article
+} //main-content
+
+
 
 
 // Footer

@@ -1,4 +1,5 @@
 require "bootstrap-sass"
+require "susy"
 
 # Change Compass configuration
 compass_config do |config|
