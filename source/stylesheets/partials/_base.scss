@@ -64,23 +64,19 @@ $info-background:                    #d9edf7;
 $info-border:                        darken(adjust-hue($info-background, -10), 7%);
 
 
-// SUSY GRID
-// --------------------------------------------------
-
-$total-columns:                      12;
-$column-width:                       4em;
-$gutter-width:                       1em;
-$grid-padding:                       $gutter-width;
-
-
 // IMPORTS & INCLUDES
 // --------------------------------------------------
 
 //Normalize
 @import "normalize";
 
+//Typeplate -- http://typeplate.com/
+// @import "typeplate";
+
+@import "bootstrap";
+
 //Compass Mixins
-@import "compass/css3";
+@import "compass";
 
 //Font Awesome
 @import "font_awesome";
@@ -88,6 +84,5 @@ $grid-padding:                       $gutter-width;
 // My Mixins
 @import "custom_mixins";
 
-//Susy Grid
-@import 'susy';
-
+// Components
+@import "components/button";

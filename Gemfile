@@ -1,8 +1,11 @@
 source :rubygems
 
-gem "coffee_cup"
-gem "sass"
 gem "middleman"
 gem 'middleman-smusher'
-gem "compass"
-gem "susy"
+
+gem "coffee_cup"
+gem "bootstrap-sass"
+
+gem "kss"
+gem "rb-fsevent" #mac
+gem "therubyracer"
