@@ -1,0 +1,45 @@
+---
+styleguide: true
+---
+
+<%= @styleguide = Kss::Parser.new('source/stylesheets') %>
+
+<article class="styleguide-content">
+  <header class="styleguide-header">
+    <h1>SCSS Syntax</h1>
+    <h3>Proper SCSS Syntax Guidelines</h3>
+  </header>
+  <!-- /styleguide-header -->
+
+  <section class="styleguide-body">
+    <p>Ample uses <%= link_to 'SCSS', 'http://sass-lang.com/', target: '_blank' %> in place of vanilla CSS to speed up development time and to maintain an organized project codebase.</p>
+    <p>While we're not very strict about how to structure styles, there are a few guidelines you should adhere to.</p>
+    <h3>Coding Style</h3>
+    <ul>
+      <li>Use soft-tabs with a two-space indent.</li>
+      <li>Put spaces after : in property declarations.</li>
+      <li>When a rule declaration has more than one property, split properties on individual lines.</li>
+      <li>Comment each rule declaration with closing comments //</li>
+      <li>To the extent it is possible, avoid nesting rule declarations more than 4 levels deep. If you need to go more than that, think about how else you can accomplish this.</li>
+    </ul>
+    <script src="https://gist.github.com/procload/5374477.js"></script>
+    <h3>What should go where</h3>
+    <p>All global and base styles should live in screen.scss.</p>
+    <p>So that means you should set your naked, classless elements, such as H1 - H6, anchors, paragraph tags default styles here. This file should also hold styles associated with global headers and footers, container elements and your main content area.</p>
+    <h3>Commenting your files</h3>
+    <p>It is important to keep well-documented files that can be easily scanned and read by other developers and designers</p>
+    <p>Each module or specific section should be separated by a comment block.</p>
+    <script src="https://gist.github.com/procload/5374513.js"></script>
+    <h3>Adjusting Styles with Breakpoints</h3>
+    <p>When developing responsive websites, list all styles that apply to all and the smallest screen size before you alter styles for larger screens.</p>
+    <script src="https://gist.github.com/procload/5374538.js"></script>
+  </section>
+</article>
+<!-- /styleguide-content -->
+
+
+
+
+
+
+

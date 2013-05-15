@@ -13,20 +13,26 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> 
+  <%= javascript_include_tag "libs/lang-scss" %>
   <%= javascript_include_tag "libs/modernizr" %>
   <%= stylesheet_link_tag "screen" %>
-  
+
   <!-- Typekit -->
   <script type="text/javascript" src="//use.typekit.net/ksh5vfs.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </head>
 <body class="<%= page_classes %>">
-
-  <header id="site-header" class="site-header">
-  </header><!-- site-header -->
-
+  <header class="site-header">
+    <%= partial 'partials/nav' %>
+  </header>
+  <!-- /site-header -->
+  
   <main class="main-content">
+    <% if data.page.styleguide? %>
+      <%= partial 'styleguide/nav' %>
+    <% end %>
     <%= yield %>
   </main><!-- /main-content -->
 
@@ -34,9 +40,9 @@
     <section class="footer-content">
     </section><!-- /footer-content -->
   </footer><!-- /site-footer -->
-
+  
   <%= javascript_include_tag "public" %>
-  <script>
+   <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

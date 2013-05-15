@@ -32,7 +32,7 @@ $purple:                #7a43b6;
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        $white;
+$bodyBackground:        $grayDarker;
 $textColor:             $grayDark;
 
 
@@ -44,11 +44,12 @@ $linkColorHover:        darken($linkColor, 15%);
 
 // Typography
 // -------------------------
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+$sansFontFamily:        "ff-meta-web-pro", "Museo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       "ff-meta-serif-web-pro", Georgia, "Times New Roman", Times, serif;
+$smallCapsFontFamily:   "ff-meta-sc-web-pro";
+$monoFontFamily:        "source-sans-pro", Monaco, Menlo, Consolas, "Courier New", monospace;
 
-$baseFontSize:          14px;
+$baseFontSize:          15px;
 $baseFontFamily:        $sansFontFamily;
 $baseLineHeight:        20px;
 $altFontFamily:         $serifFontFamily;
@@ -258,57 +259,19 @@ $popoverArrowOuterWidth:  $popoverArrowWidth + 1;
 $popoverArrowOuterColor:  rgba(0,0,0,.25);
 
 
-
 // GRID
 // --------------------------------------------------
-
-
-// Default 940px grid
-// -------------------------
-$gridColumns:             12;
-$gridColumnWidth:         60px;
-$gridGutterWidth:         20px;
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
-
-// 1200px min
-$gridColumnWidth1200:     70px;
-$gridGutterWidth1200:     30px;
-$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1));
-
-// 768px-979px
-$gridColumnWidth768:      42px;
-$gridGutterWidth768:      20px;
-$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1));
-
-
-// Fluid grid
-// -------------------------
-$fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth);
-$fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth);
-
-// 1200px min
-$fluidGridColumnWidth1200:     percentage($gridColumnWidth1200/$gridRowWidth1200);
-$fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200);
-
-// 768px-979px
-$fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768);
-$fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768);
 
 // Susy grid
 // -------------------------
 $total-columns  : 12;             // a 12-column grid
-$column-width   : 4em;            // each column is 4em wide
-$gutter-width   : 1em;            // 1em gutters between columns
+$column-width   : 5em;            // each column is 4em wide
+$gutter-width   : 2em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
+
 
 // IMPORTS & INCLUDES
 // --------------------------------------------------
-
-//Normalize
-// @import "normalize";
-
-//Typeplate -- http://typeplate.com/
-// @import "typeplate";
 
 //Twitter Bootstrap
 @import "bootstrap";
@@ -319,6 +282,9 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 //Susy
 @import "susy";
 
+//Prism for code highlighting
+@import "vendor/prettify";
+
 //Font Awesome
 @import "font_awesome";
 
@@ -326,4 +292,6 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 @import "custom_mixins";
 
 // Components
-@import "components/button";
+@import "components/btn";
+
+@import "modules";

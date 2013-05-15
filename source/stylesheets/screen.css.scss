@@ -1,5 +1,5 @@
 @import 'partials/base';
-
+@import 'styleguide/styleguide';
 
 // Global
 // --------------------------------------------------
@@ -19,44 +19,66 @@ h4, h5, h6 {
   line-height: 1.25;
 }
 
-p {
-  font-weight: 300;
+h1 {
+  font-size: calc-em(36px);
+  border-bottom: 1px solid $grayLighter;
+  padding-bottom: calc-em(16px, 36px);
+  margin-bottom: calc-em(16px, 36px);
 }
 
+h3 {
+  
+  font-size: calc-em(15px);
+  color: $grayLight;
+  margin-bottom: calc-em(6px, 15px);
+  line-height: 1.5em;
+  font-family: $smallCapsFontFamily;
+}
+
+
+
+
+p {
+  font-weight: 300;
+  font-size: calc-em(15px);
+  line-height: calc-em(22px, 15px);
+  margin: 0 0 calc-em(7px, 15px);
+  
+}
+
+code,
+pre {
+  margin-bottom: calc-em(30px);
+  padding: 0;
+}
+
+ul {
+  margin-bottom: 1em;
+  font-size: calc-em(14px);
+  li {
+    margin-bottom: calc-em(6px);
+  }
+}
+
+label {
+  font-weight: 700;
+}
 
 // Header
 // --------------------------------------------------
 .site-header {
+  background: $black;
 
 }
 
 
 // Main Content
 // --------------------------------------------------
-// .main-content {
-//   @extend %container-fluid;
-  
-//   .content {
-//     @extend .row-fluid;  
-//   }
-//   .sidebar {
-//     @include respond-to(47em) {
-//       float: left;
-//       @extend .span3; // Cannot use this type of @extend within a media query
-//     }
-//   } //sidebar
 
-//   .main-article {
-//     @include respond-to(47em) {
-//       float: left;
-//       @extend .span8;   // Cannot use this type of @extend within a media query
-//       @extend .offset1; // Cannot use this type of @extend within a media query
-//     }
-//   } //main-article
-// } //main-content
 
 .main-content {
   @include container;
+  padding-top: calc-em(60px);
   .content {
     @extend %group;
   }

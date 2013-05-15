@@ -10,51 +10,48 @@ compass_config do |config|
 end
 
 # Use KSS for awesome styleguide support
-
 require "kss"
 
 # When filename globbing is put back in Middleman 3, this will be much less ugly
-# ['01_structure','02_colors','03_typography','04_links','05_buttons','06_forms','07_tables','08_dialogs','09_graphic','10_navigation','11_modules'].each do |name|
-#   page "/styleguide/#{name}.html", layout => "layouts/styleguide" do
-#     @styleguide = Kss::Parser.new('source/stylesheets')
-#   end
+page "styleguide/*", layout: "layouts/layout"
+
+# page "/styleguide/index.html", :layout => "layouts/styleguide" do
+# 
+#   @styleguide = Kss::Parser.new('source/stylesheets')
 # end
-page "/styleguide/index.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/01_structure.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/02_colors.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/03_typography.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/04_links.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/05_buttons.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/06_forms.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/07_tables.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/08_dialogs.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/09_graphic.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/10_navigation.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
-page "/styleguide/11_modules.html", :layout => "layouts/styleguide" do
-  @styleguide = Kss::Parser.new('source/stylesheets')
-end
+# page "/styleguide/01_structure.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/02_colors.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/03_typography.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/04_links.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/05_buttons.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/06_forms.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/07_tables.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/08_dialogs.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/09_graphic.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/10_navigation.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
+# page "/styleguide/11_modules.html", :layout => "layouts/styleguide" do
+#   @styleguide = Kss::Parser.new('source/stylesheets')
+# end
 
 ###
 # Helpers

@@ -1,0 +1,35 @@
+---
+styleguide: true
+---
+
+<%= @styleguide = Kss::Parser.new('source/stylesheets') %>
+
+<article class="styleguide-content">
+  <header class="styleguide-header">
+    <h1>Project Organization</h1>
+    <h3>How we organize our SCSS projects at Ample</h3>
+  </header>
+  <!-- /styleguide-header -->
+
+  <section class="styleguide-body">
+    <p>Ample adhere's to a modular philosophy taken loosely from <%= link_to 'Jonathon Snook\'s SMACSS', 'http://smacss.com/', target: '_blank' %> guide to developing small and large websites.</p>
+    <p>Since Ample uses SCSS, we're able to separate and organize many aspects of our CSS stack. Each project's SCSS files should resemble the following directory structure.</p>
+    <script src="https://gist.github.com/procload/5374577.js"></script>
+    <h3>Partials</h3>
+    <p>Your base stylesheet, which includes variables and imports for the entire project, and your mixin file should always be found here. The _modules.scss file, which includes project-specific module style should also always be found in this directory.</p>
+    <h3>Pages</h3>
+    <p>Page-specific layouts should always be found in their corresponding SCSS files located in this directory.</p>
+    <p>Page-specific module style overrides should also always be found here as well.</p>
+    <p>Start each stylesheet with an overarching page-specific class name which corresponds to the page you are working on. For example if we are changing on the content-block module's padding is applied when it is in the About page:</p>
+    <script src="https://gist.github.com/procload/5374599.js"></script>
+    <h3>Vendor</h3>
+    <p>All non-Ample CSS/SCSS files such as Font Awesome and Normalize should be included here.</p>
+  </section>
+</article>
+<!-- /styleguide-content -->
+
+
+
+
+
+

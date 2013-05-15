@@ -15,7 +15,7 @@
   
   <%= javascript_include_tag "libs/modernizr" %>
   <%= stylesheet_link_tag "screen" %>
-  <%= stylesheet_link_tag "styleguide" %>
+
 
   <!-- Typekit -->
   <script type="text/javascript" src="//use.typekit.net/ksh5vfs.js"></script>
@@ -24,15 +24,17 @@
 </head>
 
 <body class="<%= page_classes %>">
-  <header class="styleguide-header">
-    Styleguide
+  <header class="site-header">
+    <%= partial 'partials/nav' %>
   </header>
+  <!-- /site-header -->
 
   <div id="styleguide">
     <%= partial 'styleguide/nav' %>
     <%= yield %>
   </div>
-  <%= javascript_include_tag "main" %>
+
   <%= javascript_include_tag "libs/kss" %>
+  <%= javascript_include_tag "libs/prism" %>
 </body>
 </html>

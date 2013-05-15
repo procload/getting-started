@@ -15,8 +15,3 @@ $ ->
       $(this).find("input[placeholder]").each ->
         @value = ""  if @value is $(this).attr("placeholder")
 
-    $('ul.sortable').sortable
-      handle: 'i.icon-move'
-      appendTo: 'body'
-      helper: 'clone'
-      #  $('<div></div>').text('element').css({ width: 'auto' })

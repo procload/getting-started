@@ -1,0 +1,77 @@
+// 1. Navbar
+// ---------------------------------------------------
+
+.no-svg .navbar .brand {
+  @include replace-text(495px, 122px, image-url('img-logo.png') top left no-repeat);
+}
+
+.navbar {
+  margin-bottom: 0;
+  font-family: $headingsFontFamily;
+  background: $bodyBackground;
+  .brand {
+    @include replace-text(250px, 62px, image-url('img-logo.svg') top left no-repeat);
+    background-size: contain;
+    position: absolute;
+    z-index: 3;
+
+    @include filter(drop-shadow(rgba(0,0,0,.35) 2px 2px 5px));
+    @include respond-to('medium-screens') {
+      @include replace-text(490px, 120px, image-url('img-logo.svg') top left no-repeat);
+    } //medium-screens
+  } //brand
+  .nav {
+    > li {
+      > a {
+        color: #FFF;
+        font-size: calc-em(13px, $baseFontSize);
+        font-weight: 700;
+        @include text-shadow(rgba(0,0,0,1) 0 -1px 0);
+        @include transition(all .3s);
+        &.active,
+        &:hover {
+          color: $yellow; 
+        }
+      } //a
+    } //li
+  } //nav
+  .navbar-inner {
+    background: $bodyBackground;
+    @extend %container;
+    border-bottom: 0;
+  } //navbar-inner
+  .nav-collapse {
+    .nav {
+      padding-top: 0; 
+      @include respond-to('medium-screens') {
+        padding-top: 0;
+      } //medium-screens
+      @include respond-to('wide-screens') {
+        padding-top: 0; 
+      } //wide-screens
+      @include ie8 {
+        padding-top: 0;
+      }
+      > li {
+        a {
+          &:hover {
+            
+          }
+          &.active {
+            
+          } //hover 
+        } //a
+      } //li
+    } //nav
+  } //nav-collapse
+  .btn-navbar {
+    position: relative;
+    z-index: 10;
+  }
+} //navbar
+
+// 2. Gist
+// ---------------------------------------------------
+.gist {
+  margin: calc-em(32px) 0;
+}
