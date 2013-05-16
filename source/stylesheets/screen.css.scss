@@ -21,28 +21,28 @@ h4, h5, h6 {
 
 h1 {
   font-size: calc-em(36px);
-  border-bottom: 1px solid $grayLighter;
-  padding-bottom: calc-em(16px, 36px);
-  margin-bottom: calc-em(16px, 36px);
+}
+
+h2 {
+  font-size: calc-em(18px);
+  font-weight: 100;
 }
 
 h3 {
-  
-  font-size: calc-em(15px);
-  color: $grayLight;
-  margin-bottom: calc-em(6px, 15px);
+  font-size: calc-em(14px);
+  margin-top: calc-em(12px, 14px);
+  margin-bottom: calc-em(6px, 14px);
   line-height: 1.5em;
-  font-family: $smallCapsFontFamily;
 }
 
 
 
 
 p {
-  font-weight: 300;
-  font-size: calc-em(15px);
-  line-height: calc-em(22px, 15px);
-  margin: 0 0 calc-em(7px, 15px);
+  font-weight: 500;
+  font-size: calc-em(16px);
+  line-height: calc-em(24px, 16px);
+  margin: 0 0 calc-em(16px, 16px);
   
 }
 
@@ -54,9 +54,9 @@ pre {
 
 ul {
   margin-bottom: 1em;
-  font-size: calc-em(14px);
   li {
     margin-bottom: calc-em(6px);
+    font-size: calc-em(12px);
   }
 }
 
@@ -68,7 +68,6 @@ label {
 // --------------------------------------------------
 .site-header {
   background: $black;
-
 }
 
 

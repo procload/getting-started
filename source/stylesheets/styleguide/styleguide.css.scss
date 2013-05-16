@@ -25,12 +25,17 @@
   background: $white;
   border: 1px solid $grayLighter;
   box-sizing: border-box;
+  .styleguide-header {
+    border-bottom: 1px solid $grayLighter;
+    padding-bottom: calc-em(8px);
+    margin-bottom: calc-em(24px);
+  }
 }
-
 
 /*----------------------------------------------------------------------------
   @group Styleguide Styles
 ----------------------------------------------------------------------------*/
+
 
 h1.styleguide {
   margin: 0 0 -5px 0;
