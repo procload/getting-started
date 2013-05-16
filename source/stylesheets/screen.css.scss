@@ -4,7 +4,7 @@
 // Global
 // --------------------------------------------------
 body {
-  background: $bodyBackground image-url('backgrounds/bg-page.png') repeat;
+  background: $white;
   color: $textColor;
   line-height: 1.5;
   font-size: 100%;
@@ -26,6 +26,7 @@ h1 {
 h2 {
   font-size: calc-em(18px);
   font-weight: 100;
+  color: lighten($textColor, 30%);
 }
 
 h3 {
@@ -55,8 +56,9 @@ pre {
 ul {
   margin-bottom: 1em;
   li {
-    margin-bottom: calc-em(6px);
-    font-size: calc-em(12px);
+    margin-bottom: calc-em(6px, 14px);
+    font-size: calc-em(14px);
+    line-height: calc-em(21px, 14px);
   }
 }
 

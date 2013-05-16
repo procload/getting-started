@@ -20,10 +20,9 @@
 }
 
 .styleguide-content {
-  padding: calc-em(10px) 0;
   @include span-columns(9 omega, 12, calc-em(30px));
   background: $white;
-  border: 1px solid $grayLighter;
+  /*border: 1px solid $grayLighter;*/
   box-sizing: border-box;
   .styleguide-header {
     border-bottom: 1px solid $grayLighter;
