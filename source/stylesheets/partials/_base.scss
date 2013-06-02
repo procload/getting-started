@@ -273,7 +273,7 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 // --------------------------------------------------
 
 //Twitter Bootstrap
-@import "bootstrap";
+@import "vendor/bootstrap/bootstrap";
 
 //Compass Mixins
 @import "compass";
@@ -281,17 +281,10 @@ $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 //Susy
 @import "susy";
 
-
-//Prism for code highlighting
-@import "vendor/prettify";
-
 //Font Awesome
 @import "font_awesome";
 
 // My Mixins
 @import "custom_mixins";
-
-// Components
-@import "components/btn";
 
 @import "modules";

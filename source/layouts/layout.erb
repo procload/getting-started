@@ -13,8 +13,6 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> 
-  <%= javascript_include_tag "libs/lang-scss" %>
   <%= javascript_include_tag "libs/modernizr" %>
   <%= stylesheet_link_tag "screen" %>
 
@@ -30,10 +28,7 @@
   <!-- /site-header -->
   
   <main class="main-content">
-    <% if data.page.styleguide? %>
-      <%= partial 'styleguide/nav' %>
-    <% end %>
-    <%= yield %>
+    <h1>Getting Started</h1>
   </main><!-- /main-content -->
 
   <footer class="site-footer" id="signup">
