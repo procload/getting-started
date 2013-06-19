@@ -4,9 +4,9 @@ Barefoot is using [Middleman](http://middlemanapp.com/guides/getting-started), [
 
 ## Setup Instructions
 
-# `git clone -b barefoot-demo git@github.com:procload/getting-started.git YOUR_PROJECT_NAME`
-# `cd YOUR_PROJECT_NAME`
-# `bundle`
-# `middleman`
+* `git clone -b barefoot-demo git@github.com:procload/getting-started.git YOUR_PROJECT_NAME`
+* `cd YOUR_PROJECT_NAME`
+* `bundle`
+* `middleman`
 
 Boom.
