@@ -54,22 +54,6 @@ p {
     margin-bottom: 0;
   }
 }
-.schedule-component {
-  background: #FF0000;
-  width: 10em;
-  .content & {
-    @include respond-to(500px) {
-      width: 16em;
-      background: #FFF;
-    }  
-  }
-  .aside & {
-    @include respond-to(800px) {
-      width: 32em;
-      background: #000;
-    }
-  }
-}
 
 // Links
 // --------------------------------------------------
