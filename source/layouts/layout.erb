@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Index</title>
+  <title>Getting Started</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -28,11 +28,28 @@
   <!-- /site-header -->
   
   <main class="main-content">
-    <h1>Getting Started</h1>
+    <%= yield %>
   </main><!-- /main-content -->
 
   <footer class="site-footer" id="signup">
     <section class="footer-content">
+      <div class="contact-exxon">
+        <%= link_to "<i class='icon-globe'></i> Global Websites", '#' %>
+        <%= link_to "<i class='icon-phone'></i> Contact Us", '#' %>
+      </div><!-- /div -->
+      <nav class="footer-nav">
+        <ul class="nav site-nav">
+          <% 5.times do %>
+            <li><%= link_to 'Site Nav' %></li>
+          <% end %>
+        </ul>
+        <ul class="nav global-nav">
+          <% 5.times do %>
+            <li><%= link_to 'Global Nav' %></li>
+          <% end %>
+        </ul>
+      </nav> <!-- /footer-nav -->
+
     </section><!-- /footer-content -->
   </footer><!-- /site-footer -->
   

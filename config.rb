@@ -1,23 +1,11 @@
+require "compass"
 require "susy"
 
-# Change Compass configuration
-compass_config do |config|
-#   config.output_style = :compact
-  config.http_path = "/"
-  config.images_dir = "img"
-  config.javascripts_dir = "js"
-end
-
+activate :livereload
 
 ###
 # Helpers
 ###
-
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'js'
-
-set :images_dir, 'img'
 
 # Methods defined in the helpers block are available in templates
 helpers do

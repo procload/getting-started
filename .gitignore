@@ -1,4 +1,5 @@
-build
+build/*
 .sass-cache
 .DS_Store*
+.rvmrc
 tmp/*

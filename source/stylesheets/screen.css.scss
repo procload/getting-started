@@ -1,13 +1,22 @@
 @import 'partials/base';
+@import 'pages/home';
 
 // Global
 // --------------------------------------------------
+html {
+  font-size: 100%;
+}
+
 body {
-  background: $body-bg;
-  color: $text-color;
+  background: $bodyBackground;
+  color: $textColor;
   line-height: 1.5;
   font-size: 100%;
-  font-family: $base-font-family;
+  font-family: $baseFontFamily;
+}
+
+%container {
+  @include container;
 }
 
 
@@ -16,30 +25,89 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
   line-height: 1.25;
+  margin: 0 0 1em 0;
 }
 
 h1 {
+  font-size: calc-em(60px);
 }
 
 h2 {
+
 }
 
 h3 {
+
+}
+
+h4 {
+  margin-bottom: .25em;
+}
+
+h5 {
+  margin-bottom: .25em;
 }
 
 p {
+  margin: 0 0 1em 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
+
+// Links
+// --------------------------------------------------
+
 
 // Header
 // --------------------------------------------------
+.page-header {
+  @extend %group;
 
+}
+
+// Navbar
+// --------------------------------------------------
+.navbar {
+  .main-nav {
+    @extend %container;
+    @extend %group;
+  }
+
+  .brand {
+    font-size: calc-em(20px);
+    padding: calc-em(5px, 20px) 0;
+    @include span-columns(2);
+  }
+
+  .nav-collapse {
+    @extend %group;
+    @include span-columns(10 omega);
+    .nav {
+      @include span-columns(6, 10);
+    }
+    .navbar-form {
+      @include span-columns(4 omega, 10);
+      input {
+        height: calc-em(20px);
+
+      }
+      button {
+        margin-top: calc-em(4px, 14px);
+        line-height: calc-em(21px, 14px);
+        font-size: calc-em(14px);
+      }
+    }
+  }
+}
 
 // Main Content
 // --------------------------------------------------
 
-
 .main-content {
-  @include container;
+  @extend %container;
+  @include susy-grid-background; 
+  margin-bottom: calc-em(64px);
 } //main-content
 
 
@@ -48,5 +116,24 @@ p {
 // Footer
 // --------------------------------------------------
 .site-footer {
+  .footer-content {
+    @extend %container;
+  }
+  .contact-exxon {
+    text-align: center;
+    font-size: calc-em(12px);
+    margin-bottom: calc-em(6px, 12px);
+    padding-bottom: calc-em(6px, 12px);
+    border-bottom: 1px solid $grayLighter;
+  }
 
+  .footer-nav {
+    .nav {
+      text-align: center;
+      li {
+        font-size: calc-em(12px);
+        display: inline-block;
+      }
+    }
+  }
 }

@@ -1,0 +1,60 @@
+<header class="page-header">
+  <section class="home-slideshow">
+    <%= partial 'partials/carousel' %>
+  </section> <!-- /home-slideshow -->
+
+  <section class="header-callouts">
+    <% 2.times do %>
+    <div class="well callout-with-image">
+      <div class="callout-image">
+        <%= image_tag 'http://placehold.it/100x100' %> 
+      </div> <!-- callout-image -->
+      <div class="callout-text">
+        <h5>Callout Headline</h5>
+        <p>Learn more about the benefits</p>
+      </div> <!-- /callout-text -->
+    </div>
+    <% end %>
+  </section>
+
+</header> <!-- /page-header -->
+
+<section class="page-body">
+
+  <section class="homepage-news">
+    <h4>News</h4>
+    <article class="news-brief">
+      <header class="brief-header">
+        <em>June 11, 2013</em>
+        <h5><%= link_to 'News Article Headline Would Go Here', '#' %></h5>
+      </header> <!-- /brief-header -->
+    </article> <!-- /news-brief -->
+  </section> <!-- /homepage-news -->
+
+  <section class="homepage-meta">
+    <h4>Quick Links</h4>
+    <ul>
+      <% 1.upto(8) do |i| %>
+      <li><%= link_to "Quick Link #{i}", '#' %></li>
+      <% end %>
+    </ul>
+    <h4>Investors</h4>
+ 
+  </section> <!-- /quick-links -->
+
+  <section class="body-callouts">
+    <% 2.times do %>
+    <div class="well callout-with-image">
+      <div class="callout-image">
+        <%= image_tag 'http://placehold.it/100x100' %> 
+      </div> <!-- callout-image -->
+      <div class="callout-text">
+        <h5>Callout Headline</h5>
+        <p>Learn more about the benefits</p>
+      </div> <!-- /callout-text -->
+    </div>
+    <% end %>
+  </section> <!-- /body-callouts -->
+  
+
+</section> <!-- /page-body -->

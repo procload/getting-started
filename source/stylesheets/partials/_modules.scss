@@ -1,0 +1,21 @@
+.callout-with-image {
+  @extend %group;
+  .callout-image {
+    @include span-columns(1,4);
+    @include respond-to('45em') {
+      @include reset-columns(); 
+    }
+    @include respond-to('50em') {
+      @include span-columns(1,4);
+    }
+  }
+  .callout-text {
+    @include span-columns(3 omega,4);
+    @include respond-to('45em') {
+      @include reset-columns(); 
+    }
+    @include respond-to('50em') {
+      @include span-columns(3 omega,4);
+    }
+  }
+}
