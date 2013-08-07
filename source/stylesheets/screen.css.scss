@@ -1,5 +1,5 @@
-@import 'partials/base';
-@import 'pages/home';
+@import "partials/base";
+@import "pages/home";
 
 // Global
 // --------------------------------------------------
@@ -8,11 +8,11 @@ html {
 }
 
 body {
-  background: $bodyBackground;
-  color: $textColor;
+  background: $body-bg;
+  color: $text-color;
   line-height: 1.5;
   font-size: 100%;
-  font-family: $baseFontFamily;
+  font-family: $font-family-base;
 }
 
 %container {
@@ -124,7 +124,7 @@ p {
     font-size: calc-em(12px);
     margin-bottom: calc-em(6px, 12px);
     padding-bottom: calc-em(6px, 12px);
-    border-bottom: 1px solid $grayLighter;
+    border-bottom: 1px solid $gray-lighter;
   }
 
   .footer-nav {

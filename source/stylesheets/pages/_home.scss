@@ -20,7 +20,7 @@ body.index {
       @include span-columns(4);
       h4 {
         padding: calc-em(5px, 14px);
-        background: $grayLighter;
+        background: $gray-lighter;
         font-size: calc-em(14px);
       }
     }

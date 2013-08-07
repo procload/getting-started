@@ -1,6 +1,6 @@
 // MATH & LAYOUT
 // --------------------------------------------------
-@function calc-em($target-px, $context: $baseFontSize) {
+@function calc-em($target-px, $context: $font-size-base) {
   @return ($target-px / $context) * 1em;
 }
 
@@ -69,6 +69,44 @@
     background-size: $width $height;
   }
 }
+
+@mixin scopedmediaquery($queries...) {
+  $length: length($queries);
+  @for $i from 1 through $length{
+    @if $i % 2 == 1 {
+      @media #{nth($queries, $i)} {
+        #{nth($queries, $i+1)} {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+/* 
+  Example Usage 
+  ----------------------
+  @include scopedmediaquery(
+    '(min-width : 30em)', '.content',
+    '(min-width : 90em)', 'aside'
+  ) {
+
+  Breakpoint Styles Here
+  ----------------------
+  .schedule-component {
+      float: left; 
+      width: 100%;
+      position:relative; 
+  }
+  .schedule-component ul,
+  .schedule-component li {
+    list-style: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+}
+*/
 
 // TYPOGRAPHY
 // --------------------------------------------------
@@ -139,13 +177,13 @@
 }
 
 @mixin ie8 {
-  html.ie8 & { // Using Paul Irish's conditional comments
+  html.lt-ie8 & { // Using Paul Irish's conditional comments
     @content;
   }
 }
 
 @mixin ie9 {
-  html.ie9 & { // Using Paul Irish's conditional comments
+  html.lt-ie9 & { // Using Paul Irish's conditional comments
     @content;
   }
 }

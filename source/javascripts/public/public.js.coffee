@@ -15,3 +15,6 @@ $ ->
       $(this).find("input[placeholder]").each ->
         @value = ""  if @value is $(this).attr("placeholder")
 
+
+    log('this `is` [c="color: red"]red[c]')
+

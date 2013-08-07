@@ -33,7 +33,7 @@ configure :build do
   # Compress PNGs after build
   # First: gem install middleman-smusher
   require "middleman-smusher"
-  activate :smusher
+  # activate :smusher
   
 end
 
