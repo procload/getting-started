@@ -128,35 +128,8 @@
   text-overflow: ellipsis;
 }
 
-// ANIMATIONS
-// --------------------------------------------------
-@mixin keyframes($name) {
-  @-webkit-keyframes #{$name} {
-    @content
-  }
-  @-moz-keyframes #{$name} {
-    @content
-  }
-  @-ms-keyframes #{$name} {
-    @content
-  }
-  @-o-keyframes #{$name} {
-    @content
-  }
-  @keyframes #{$name} {
-    @content
-  }
-}
-
-@mixin animation($value) {
-  -webkit-animation: $value;
-  -moz-animation: $value;
-  -ms-animation: $value;
-  -o-animation: $value;
-  animation: $value;
-}
 // Usage 
-// **************************************************
+// --------------------------------------------------
 /*
 @include keyframes(move) {
   0%   { left: 0; }

@@ -1,32 +1,3 @@
 body.index {
-  
-  .page-header {
-    .home-slideshow {
-      @include respond-to('45em') {
-        @include span-columns(8);  
-      }
-      
-    }
-    .header-callouts {
-      @include respond-to('45em') {
-        @include span-columns(4 omega);  
-      }
-    }
-  }
-  .page-body {
-    .homepage-news,
-    .homepage-meta,
-    .body-callouts {
-      @include span-columns(4);
-      h4 {
-        padding: calc-em(5px, 14px);
-        background: $gray-lighter;
-        font-size: calc-em(14px);
-      }
-    }
-    .body-callouts {
-      @include omega();
-    }
-  }
 
 }
