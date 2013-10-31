@@ -1,5 +1,4 @@
 @import "partials/base";
-@import "pages/home";
 
 // Global
 // --------------------------------------------------
@@ -71,10 +70,27 @@ p {
 
 .main-content {
   @extend %container;
-  @include susy-grid-background; 
-  margin-bottom: calc-em(64px);
+  /*@include susy-grid-background; */
 } //main-content
 
+.greeting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 10%;
+  vertical-align: middle;
+  text-align: center;
+  i {
+    font-size: calc-em(64px);
+    color: $brand-primary;
+  }
+  h1 {
+    font-size: calc-em(72px);
+    font-weight: 100;
+  }
+}
 
 
 
