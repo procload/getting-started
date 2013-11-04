@@ -20,12 +20,15 @@
   *zoom:1;
   &:before,
   &:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: ".";
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
     clear: both;
-    height: 0;
+  }
+  // Support for IE7 and IE6
+  html.lt-ie8 & { 
+    *zoom: 1;
   }
 }
 
