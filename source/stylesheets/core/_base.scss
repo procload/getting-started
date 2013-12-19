@@ -1,0 +1,145 @@
+// *************************************
+//
+//   Base
+//   -> Base-level tags (body, p, etc.)
+//
+// *************************************
+
+
+// -------------------------------------
+//   Global
+// -------------------------------------
+
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: $body-bg;
+  color: $text-color;
+  line-height: 1.5;
+  font-size: 100%;
+  font-family: $font-family-base;
+}
+
+img {
+  max-width: 100%;
+}
+
+// -------------------------------------
+//  Typography 
+// -------------------------------------
+
+// ----- Headlines ----- //
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  margin: 0;
+  line-height: 1.25;
+  font-family: $headings-font-family;
+  color: $headings-color;
+}
+
+h4,
+h6{
+  font-family: $subheadings-font-family;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.3em;
+}
+h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+h5 {
+  font-size: 1em;
+  margin-bottom: .25em;
+}
+h6 {
+  font-size: 0.85em;
+  font-style: italic;
+  margin-bottom: .25em;
+}
+
+h1 + h1,
+h2 + h2,
+h3 + h3,
+h4 + h4,
+h5 + h5,
+h6 + h6 {
+  margin-top: 1em;
+}
+
+
+// ----- Text blocks ----- //
+
+p {
+  margin: 0 0 1em 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &.disclaimer {
+    font-size: calc-em(13px);
+  }
+}
+
+
+// ----- Inline elements ----- //
+
+em {
+}
+
+strong {
+}
+
+// ----- List elements ----- //
+
+dt {
+  margin-bottom: 0.5em;
+}
+dd {
+  margin-bottom: 1.5em;
+}
+
+
+// -------------------------------------
+//  Forms 
+// -------------------------------------
+
+input {
+  &[type="text"] {
+    @include box-shadow(none);
+    @include border-radius(0);
+    background: $gray-lighter;
+    &:focus,
+    &:active {
+      background: $white;
+    }
+  }
+}
+
+label,
+label.control-label {
+  font-size: calc-em(13px);
+  
+}
+
+legend {
+  font-size: calc-em(14px);
+  margin: 0 0 calc-em(7px, 14px) 0;
+}

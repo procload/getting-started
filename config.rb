@@ -1,3 +1,4 @@
+require 'bootstrap-sass'
 require "compass"
 require "susy"
 

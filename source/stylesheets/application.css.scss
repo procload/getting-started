@@ -1,0 +1,58 @@
+// *************************************
+//
+//
+//  XOM Next Gen
+//
+//
+// *************************************
+
+// -------------------------------------
+//   External Libraries & Settings
+// -------------------------------------
+
+// ----- Settings ----- //
+@import "core/settings";
+
+// ----- Bootstrap ----- //
+@import "bootstrap";
+
+// ----- Compass ----- //
+@import "compass";
+
+// ----- Susy ----- //
+@import "susy";
+
+// ----- Font Awesome ----- //
+@import "partials/font_awesome";
+
+// -------------------------------------
+//   Core
+// -------------------------------------
+
+// ----- Helpers ----- //
+@import "core/helpers";
+
+// ----- Base ----- //
+@import "core/base";
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+@import "modules/example";
+
+// -------------------------------------
+//   Pages
+// -------------------------------------
+
+@import "pages/home";
+
+// -------------------------------------
+//   Inbox
+// -------------------------------------
+
+.main-content {
+  @extend %container;
+  /*@include susy-grid-background; */
+} //main-content

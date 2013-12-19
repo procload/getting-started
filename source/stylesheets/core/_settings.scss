@@ -1,32 +1,43 @@
-// Variables
-// --------------------------------------------------
+// *************************************
+//
+//   Settings
+//   -> Fonts, Variables
+//
+// *************************************
 
-// Global values
-// --------------------------------------------------
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
 
 // Grays
 // -------------------------
-
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             lighten(#000, 60%) !default;   // #999
-$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+$black:                  #000;
+$gray-darkest:           #1E2628;
+$gray-darker:            #232323;
+$gray-dark:              #2F2F2F;
+$gray:                   #3A3A3A;
+$gray-light:             #CECECE;
+$gray-lighter:           #E3E3E3; 
+$white:                  #FFF;
 
 // Brand colors
 // -------------------------
-
-$brand-primary:         #428bca !default;
+$brand-primary:         #0A47BA !default;
 $brand-success:         #5cb85c !default;
 $brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$brand-danger:          #d42e12 !default;
 $brand-info:            #5bc0de !default;
 
 // Scaffolding
 // -------------------------
 
 $body-bg:               #fff !default;
-$text-color:            $gray-dark !default;
+$text-color:            $gray;
 
 // Links
 // -------------------------
@@ -42,17 +53,19 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          14px !default;
+$font-size-base:          16px !default;
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-small:         ceil($font-size-base * 0.85) !default; // ~12px
 
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
 
-$headings-font-family:    $font-family-base !default;
+$headings-font-family:    $font-family-sans-serif; 
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
+$headings-color:          $black;
 
+$subheadings-font-family: $font-family-sans-serif;
 
 // Components
 // -------------------------
@@ -99,7 +112,7 @@ $table-border-color:                 #ddd !default; // table and cell border
 $btn-font-weight:                bold !default;
 
 $btn-default-color:              #333 !default;
-$btn-default-bg:                 #fff !default;
+$btn-default-bg:                 darken(#EEE, 10%) !default;
 $btn-default-border:             #ccc !default;
 
 $btn-primary-color:              #fff !default;
@@ -576,22 +589,9 @@ $hr-border:                   $gray-lighter !default;
 $component-offset-horizontal: 180px !default;
 
 
-// Container sizes
-// --------------------------------------------------
-
-// Small screen / tablet
-$container-tablet:          728px !default;
-
-// Medium screen / desktop
-$container-desktop:         940px !default;
-
-// Large screen / wide desktop
-$container-large-desktop:   1170px !default;
-
-
 // Susy Grid system
-// --------------------------------------------------
-$total-columns  : 12;             // a 12-column grid
-$column-width   : 4.375em;            // each column is 4em wide
-$gutter-width   : 1.25em;            // 1em gutters between columns
-$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+// --------------------------
+$total-columns  : 16;             // a 16-column grid
+$column-width   : 3.43752em;       // each column is 2.8125em (55px) wide
+$gutter-width   : 1.25em;         // 1.25em (20px) gutters between columns
+$grid-padding   : $gutter-width/2;  // grid-padding equal to gutters
