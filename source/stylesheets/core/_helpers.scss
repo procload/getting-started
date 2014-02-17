@@ -48,7 +48,7 @@
 // -------------------------------------
 
 // ----- Turn Pixels into Ems ----- //
-@function calc-em($target-px, $context: $font-size-base) {
+@function calc-em($target-px, $context: $em-base) {
   @return ($target-px / $context) * 1em;
 }
 

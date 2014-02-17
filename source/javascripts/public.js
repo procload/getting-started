@@ -1,3 +1,4 @@
-//= require libs/jquery
-//= require bootstrap
+//= require foundation
 //= require_tree ./public
+// Initialize Foundation
+$(document).foundation();

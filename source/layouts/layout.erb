@@ -21,7 +21,7 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </head>
-<body class="<%= page_classes %>">
+<body class="<%= page_classes %> <%= data.page.page_classes %>">
   <header class="site-header">
   </header>
   <!-- /site-header -->
@@ -35,6 +35,12 @@
     </section><!-- /footer-content -->
   </footer><!-- /site-footer -->
   
+  <!-- 4. Check for Zepto support, load jQuery if necessary -->
+  <script>
+    document.write('<script src=/javascripts/vendor/'
+        + ('__proto__' in {} ? 'zepto' : 'jquery')
+        + '.js><\/script>');
+  </script>
   <%= javascript_include_tag "public" %>
 
 

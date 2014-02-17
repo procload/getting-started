@@ -20,10 +20,10 @@ html {
 
 body {
   background: $body-bg;
-  color: $text-color;
+  color: $body-font-color;
   line-height: 1.5;
   font-size: 100%;
-  font-family: $font-family-base;
+  font-family: $body-font-family;
 }
 
 img {
@@ -44,13 +44,10 @@ h5,
 h6, {
   margin: 0;
   line-height: 1.25;
-  font-family: $headings-font-family;
-  color: $headings-color;
 }
 
 h4,
 h6{
-  font-family: $subheadings-font-family;
 }
 
 h1 {
@@ -93,9 +90,6 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
-  &.disclaimer {
-    font-size: calc-em(13px);
-  }
 }
 
 
@@ -126,23 +120,23 @@ a {
 }
 
 a:link    {
-  color: $blue;
+  color: $primary-color;
   -webkit-transition: color .3s ease-in-out;
   transition:         color .3s ease-in-out;
 }
 
 a:visited {
-  color: $purple;
+  color: $primary-color;
 }
 
 a:hover   {
-  color: $aqua;
+  color: $primary-color;
   -webkit-transition: color .3s ease-in-out;
   transition:         color .3s ease-in-out;
 }
 
 a:active  {
-  color: $orange;
+  color: $primary-color;
   -webkit-transition: color .3s ease-in-out;
   transition:         color .3s ease-in-out;
 }
@@ -155,16 +149,13 @@ input {
   &[type="text"] {
     @include box-shadow(none);
     @include border-radius(0);
-    background: $gray-lighter;
     &:focus,
     &:active {
-      background: $white;
     }
   }
 }
 
-label,
-label.control-label {
+label {
   font-size: calc-em(13px);
   
 }
