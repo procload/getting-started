@@ -14,9 +14,29 @@
 //   Variables
 // -------------------------------------
 
+// Cool
+// -------------------------
+$aqua:                   #7FDBFF;
+$blue:                   #0074D9;
+$navy:                   #001F3F;
+$teal:                   #39CCCC;
+$green:                  #2ECC40;
+$olive:                  #3D9970;
+$lime:                   #01FF70;
+
+// Warm
+// -------------------------
+$yellow:                 #FFDC00;
+$orange:                 #FF851B;
+$red:                    #FF4136;
+$fuchsia:                #F012BE;
+$purple:                 #B10DC9;
+$maroon:                 #85144B;
+
 // Grays
 // -------------------------
 $black:                  #000;
+$silver:                 #ddd;
 $gray-darkest:           #1E2628;
 $gray-darker:            #232323;
 $gray-dark:              #2F2F2F;
@@ -27,11 +47,11 @@ $white:                  #FFF;
 
 // Brand colors
 // -------------------------
-$brand-primary:         #0A47BA !default;
-$brand-success:         #5cb85c !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d42e12 !default;
-$brand-info:            #5bc0de !default;
+$brand-primary:         $blue   !default;
+$brand-success:         $green  !default;
+$brand-warning:         $orange !default;
+$brand-danger:          $red    !default;
+$brand-info:            $teal   !default;
 
 // Scaffolding
 // -------------------------

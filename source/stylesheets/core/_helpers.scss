@@ -186,6 +186,16 @@
 //   Layout Mixins
 // -------------------------------------
 
+// ----- Vertical Align Anything ----- //
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
 // ----- One-true-layout Hack for Equal Columns ----- //
 @mixin equalize-column {
   margin-bottom: -99999px;
