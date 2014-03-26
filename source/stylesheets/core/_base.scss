@@ -19,9 +19,9 @@ html {
 }
 
 body {
-  background: $body-bg;
+  background: $background-color;
   color: $text-color;
-  line-height: 1.5;
+  line-height: $base-line-height;
   font-size: 100%;
   font-family: $font-family-base;
 }
@@ -31,7 +31,7 @@ img {
 }
 
 // -------------------------------------
-//  Typography 
+//  Typography
 // -------------------------------------
 
 // ----- Headlines ----- //
@@ -117,44 +117,40 @@ dd {
 }
 
 // -------------------------------------
-//  Links 
+//  Links
 // -------------------------------------
 a {
   text-decoration:    none;
-  -webkit-transition: color .3s ease-in-out;
   transition:         color .3s ease-in-out;
 }
 
 a:link    {
-  color: $blue;
-  -webkit-transition: color .3s ease-in-out;
+  color: $link-color;
   transition:         color .3s ease-in-out;
 }
 
 a:visited {
-  color: $purple;
+  color: $link-color;
 }
 
 a:hover   {
-  color: $aqua;
-  -webkit-transition: color .3s ease-in-out;
+  color: darken($link-color, 10%);
   transition:         color .3s ease-in-out;
 }
 
 a:active  {
-  color: $orange;
-  -webkit-transition: color .3s ease-in-out;
+  color: darken($link-color, 10%);
   transition:         color .3s ease-in-out;
 }
 
 // -------------------------------------
-//  Forms 
+//  Forms
 // -------------------------------------
 
 input {
   &[type="text"] {
-    @include box-shadow(none);
-    @include border-radius(0);
+    box-shadow: none;
+    border-radius: 0;
     background: $gray-lighter;
     &:focus,
     &:active {
@@ -166,7 +162,6 @@ input {
 label,
 label.control-label {
   font-size: calc-em(13px);
-  
 }
 
 legend {

@@ -38,7 +38,7 @@
 
 
 // ----- Container ----- //
-// Assumes using Susy grid for layout 
+// Assumes using Susy grid for layout
 %container {
   @include container;
 }
@@ -48,7 +48,7 @@
 // -------------------------------------
 
 // ----- Turn Pixels into Ems ----- //
-@function calc-em($target-px, $context: $font-size-base) {
+@function calc-em($target-px, $context: $base-font-size) {
   @return ($target-px / $context) * 1em;
 }
 
@@ -64,7 +64,7 @@
   @media only screen and (min-width: $viewport-width) {
     @content;
   }
-  @if $ie-version == 'lt-ie9' { 
+  @if $ie-version == 'lt-ie9' {
     html.lt-ie9 & { // Using Paul Irish's conditional comments
       @content;
     }

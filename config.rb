@@ -1,7 +1,11 @@
-require 'bootstrap-sass'
-require "compass"
+# Load Susy for our grid system
 require "susy"
 
+
+# Use Autoprefixer so we no longer need to use mixins for CSS3 properties
+activate :autoprefixer
+
+# Reload page when saving SCSS, CoffeeScript or HTML files
 activate :livereload
 
 ###
@@ -22,9 +26,9 @@ helpers do
 end
 
 configure :build do
-  # For example, change the Compass output style for deployment
+  # Minify CSS on build
   activate :minify_css
-  
+
   # Minify Javascript on build
   activate :minify_javascript
 
@@ -32,9 +36,7 @@ configure :build do
   activate :relative_assets
 
   # Compress PNGs after build
-  # First: gem install middleman-smusher
   require "middleman-smusher"
-  # activate :smusher
-  
+  activate :smusher
 end
 
