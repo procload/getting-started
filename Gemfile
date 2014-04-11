@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'sass', '~> 3.3.4'
+
 # Use Thoughtbot's Bourbon for SASS mixins
-gem 'bourbon', '~> 4.0.0.rc1'
+gem 'bourbon'
 
 # Use Thoughtbot's Bitters for scaffolding styles and variables
 gem "bitters"
@@ -13,6 +15,4 @@ gem "susy", "~> 2.1.1"
 gem 'middleman-autoprefixer'
 
 # Middleman
-gem 'middleman', '~> 3.2.2'
-gem 'middleman-smusher'
-gem "middleman-livereload"
+gem 'middleman', '~> 3.3.2'
