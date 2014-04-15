@@ -13,6 +13,9 @@
 // ----- Settings ----- //
 @import "core/settings";
 
+// ----- Normalize ----- //
+@import "libs/normalize";
+
 // ----- Bourbon ----- //
 @import "bourbon";
 
@@ -20,7 +23,6 @@
 @import "susy";
 
 // ----- Font Awesome ----- //
-@import "partials/font_awesome";
 
 // -------------------------------------
 //   Core
@@ -31,7 +33,6 @@
 
 // ----- Base ----- //
 @import "core/base";
-
 
 // -------------------------------------
 //   Modules
@@ -51,5 +52,4 @@
 
 .main-content {
   @extend %container;
-  /*@include susy-grid-background; */
 } //main-content

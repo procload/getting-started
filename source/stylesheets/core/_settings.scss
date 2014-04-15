@@ -44,7 +44,7 @@ $background-color:    $white;
 // Fonts
 // --------------------------
 
-$base-font-size:          "16px";
+$base-font-size:          16px;
 $base-line-height:        1.5;
 $font-family-sans-serif:  "Helvetica";
 $font-family-serif:       "Georgia";
@@ -55,16 +55,16 @@ $font-family-headings:    $font-family-serif;
 // Susy Grid system
 // --------------------------
 
-$susy: (
-  columns: 16,
-  gutters: 1/4,
-  math: fluid,
-  output: float,
-  gutter-position: inside,
-);
+/*$susy: (*/
+  /*columns: 16,*/
+  /*gutters: 1/4,*/
+  /*math: fluid,*/
+  /*output: float,*/
+  /*gutter-position: inside,*/
+/*);*/
 
-$total-columns  : 16;             // a 16-column grid
-$column-width   : 3.43752em;       // each column is 2.8125em (55px) wide
-$gutter-width   : 1.25em;         // 1.25em (20px) gutters between columns
-$grid-padding   : $gutter-width/2;  // grid-padding equal to gutters
+/*$total-columns  : 16;             // a 16-column grid*/
+/*$column-width   : 3.43752em;       // each column is 2.8125em (55px) wide*/
+/*$gutter-width   : 1.25em;         // 1.25em (20px) gutters between columns*/
+/*$grid-padding   : $gutter-width/2;  // grid-padding equal to gutters*/
 

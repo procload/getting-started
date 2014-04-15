@@ -1,6 +1,8 @@
 # Load Susy for our grid system
 require "susy"
 
+# Use Bourbon for SASS mixins and helpers
+require "bourbon"
 
 # Use Autoprefixer so we no longer need to use mixins for CSS3 properties
 activate :autoprefixer
@@ -37,6 +39,7 @@ configure :build do
 
   # Compress PNGs after build
   require "middleman-smusher"
+
   activate :smusher
 end
 

@@ -11,7 +11,7 @@
 // -------------------------------------
 
 * {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 html {
@@ -44,14 +44,9 @@ h5,
 h6, {
   margin: 0;
   line-height: 1.25;
-  font-family: $headings-font-family;
-  color: $headings-color;
+  font-family: $font-family-headings;
 }
 
-h4,
-h6{
-  font-family: $subheadings-font-family;
-}
 
 h1 {
   font-size: 2.25em;

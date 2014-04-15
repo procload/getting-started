@@ -1,3 +1,2 @@
-//= require libs/jquery
-//= require bootstrap
+//= require ./libs/jquery/dist/jquery
 //= require_tree ./public
