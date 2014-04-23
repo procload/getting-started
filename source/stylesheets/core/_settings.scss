@@ -55,13 +55,14 @@ $font-family-headings:    $font-family-serif;
 // Susy Grid system
 // --------------------------
 
-/*$susy: (*/
-  /*columns: 16,*/
-  /*gutters: 1/4,*/
-  /*math: fluid,*/
-  /*output: float,*/
-  /*gutter-position: inside,*/
-/*);*/
+$susy: (
+  columns: 16,
+  column-width: 3.5em,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
 
 /*$total-columns  : 16;             // a 16-column grid*/
 /*$column-width   : 3.43752em;       // each column is 2.8125em (55px) wide*/
