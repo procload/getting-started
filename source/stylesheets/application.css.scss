@@ -173,10 +173,11 @@ h1 {
       position: relative;
       text-indent: -9999px;
       display: block;
-      background-image: linear-gradient(to right, #00b6ff 0%,#00b6ff 35%,#60abf8 35%,#160606 35%,#160606 100%); /* W3C */  
+      background-image: linear-gradient(to right, #00b6ff 0%,#00b6ff 35%,#60abf8 35%,#160606 35%,#160606 100%);
       background-repeat: no-repeat;
-      width: 196px;
+      width: 198px;
       height: 34px;
+      line-height: 1em;
 
       &:after {
         content: "";
@@ -193,7 +194,6 @@ h1 {
 
       mask: url("http://cl.ly/Z0N9/download/offscreen.svg");
       -webkit-mask-image: url("http://cl.ly/Z0N9/download/offscreen.svg");
-
     }
-  } 
+  }
 }
