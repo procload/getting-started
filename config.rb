@@ -38,8 +38,8 @@ configure :build do
   activate :relative_assets
 
   # Compress PNGs after build
-  require "middleman-smusher"
+  # require "middleman-smusher"
 
-  activate :smusher
+  # activate :smusher
 end
 
