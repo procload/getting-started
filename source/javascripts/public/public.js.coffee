@@ -1,3 +1,5 @@
+document.addEventListener "touchstart"
+
 $ ->
 
     # Make sure older browsers support the HTML5 Placeholder Attribute
@@ -14,3 +16,24 @@ $ ->
     $("form").submit ->
       $(this).find("input[placeholder]").each ->
         @value = ""  if @value is $(this).attr("placeholder")
+
+
+    $("h1 a").on "click", (e) ->
+      e.preventDefault()
+      $this = $(this)
+      $siteNav = $("nav")
+      $navToggle = $(".navicon-button")
+
+      if $siteNav.hasClass("open")
+        $this.removeClass "nav-showing"
+        $siteNav.removeClass "open"
+        $navToggle.removeClass "open"
+      else
+        $this.addClass "nav-showing"
+        $siteNav.addClass "open"
+        $navToggle.addClass "open"
+      return
+
+    return
+
+   

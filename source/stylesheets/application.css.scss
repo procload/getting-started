@@ -16,6 +16,9 @@
 // ----- Normalize ----- //
 @import "libs/normalize";
 
+// ----- Animate ----- //
+@import "libs/animate";
+
 // ----- Bourbon ----- //
 @import "bourbon";
 
@@ -53,3 +56,144 @@
 .main-content {
   @extend %container;
 } //main-content
+
+header {
+  padding-top: 20px;
+}
+
+
+.navicon-button {
+  display: inline-block;
+  position: relative;
+  padding: 18px 24px;
+  user-select: none;
+  opacity: .8;
+  float: left;
+
+  .navicon {
+
+    position: relative;
+    width: 35px;
+    height: 2px;
+    border-radius: 30px;
+
+    background: #333;
+
+    transition: border-radius .1s ease-in-out, transform .1s ease-in-out, .1s background ease-in-out;
+
+    &:after,
+    &:before {
+      display: block;
+      content: "";
+      width: 35px;
+      height: 2px;
+      background: #333;
+      position: absolute;
+      z-index: -1;
+      border-radius: 10px;
+      transition: .1s linear transform, .3s linear background;
+      transition-delay: .05s;
+    }
+    &:before {
+      top: 8px;
+    }
+    &:after {
+      top: -8px;
+    }
+  }
+
+  &.open {
+    .navicon {
+      background: transparent;
+      &:before {
+        background: #FFF;
+        transform: rotate(-45deg);
+        top: 0;
+      }
+      &:after {
+        top: 0;
+        background: #FFF;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  left: -320px;
+  padding-top:80px;
+  background: rgba(0,0,0,.8);
+  z-index: 10;
+  transition: .2s ease-in-out all;
+  transition-delay: .3s;
+  &.open {
+    left: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    a {
+      text-decoration: none;
+      color: #FFF;
+      font-family: 'Fira Sans', sans-serif;
+      display: block;
+      padding-left: 30px;
+    }
+    li {
+      line-height: 3;
+      list-style-type: none;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+  }
+}
+
+
+
+h1 {
+  position: relative;
+
+  z-index: 20;
+  > a {
+    display: block;
+
+    &.nav-showing {
+      .logo {
+        &:after {
+          right: 0;
+
+        }
+      }
+    }
+    .logo {
+      margin-left: 90px;
+      position: relative;
+      text-indent: -9999px;
+      display: block;
+      background-image: linear-gradient(to right, #00b6ff 0%,#00b6ff 35%,#60abf8 35%,#160606 35%,#160606 100%); /* W3C */  
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 34px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        background: #FFF;
+        transition: .2s ease-in-out all;
+        transition-delay: .36s;
+        top: 0;
+        left: 0;
+        right: 320px;
+        bottom: 0;
+      }
+
+      mask: url("http://cl.ly/Z0N9/download/offscreen.svg");
+      -webkit-mask-image: url("http://cl.ly/Z0N9/download/offscreen.svg");
+
+    }
+  } 
+}

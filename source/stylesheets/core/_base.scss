@@ -122,6 +122,7 @@ a {
 a:link    {
   color: $link-color;
   transition:         color .3s ease-in-out;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); // Removes gray highlight in mobile Safari
 }
 
 a:visited {

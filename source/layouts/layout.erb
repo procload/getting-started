@@ -16,24 +16,30 @@
   <%= javascript_include_tag "libs/modernizr/modernizr" %>
   <%= stylesheet_link_tag "application" %>
 
-  <!-- Typekit -->
-  <script type="text/javascript" src="//use.typekit.net/ksh5vfs.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+  <link href='http://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body class="<%= page_classes %> <%= data.page.page_classes %>">
-  <header class="site-header">
+
+  <header>
+    <h1>
+      <a href="#">
+        <span class="navicon-button"><div class="navicon"></div></span>
+        <span class="logo">Off Screen</span>
+      </a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/work">Work</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <!-- /site-header -->
 
   <main class="main-content">
     <%= yield %>
   </main><!-- /main-content -->
-
-  <footer class="site-footer">
-    <section class="footer-content">
-    </section><!-- /footer-content -->
-  </footer><!-- /site-footer -->
 
   <%= javascript_include_tag "public" %>
 <script>
@@ -57,6 +63,5 @@
     });
   });
 </script>
-  
 </body>
 </html>
