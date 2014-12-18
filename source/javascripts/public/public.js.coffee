@@ -1,6 +1,6 @@
-document.addEventListener "touchstart"
-
 $ ->
+
+    document.addEventListener "touchstart"
 
     # Make sure older browsers support the HTML5 Placeholder Attribute
     unless "placeholder" of document.createElement("input")
@@ -36,4 +36,3 @@ $ ->
 
     return
 
-   
