@@ -13,6 +13,8 @@ gem 'susy', '~> 2.1.1'
 # Use Thoughtbot's Bourbon for SASS mixins and helpers
 gem 'bourbon'
 
+gem 'middleman' 
+
 # Use Autoprefixer so we no longer need to use mixins for CSS3 properties
 gem 'middleman-autoprefixer'
 
