@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'coffee-script'
 
+gem 'uglifier'
+
 # Use SASS 3.3 for Bourbon 4 and Susy 2
 gem 'sass', '~> 3.3.0'
 
