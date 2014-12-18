@@ -16,7 +16,6 @@ gem 'bourbon'
 # Use Autoprefixer so we no longer need to use mixins for CSS3 properties
 gem 'middleman-autoprefixer'
 
-
 # User livereload for easy editing
 gem 'middleman-livereload'
 
