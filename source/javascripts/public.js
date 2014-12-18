@@ -1,2 +1,2 @@
-//= require ./libs/jquery/dist/jquery
+//= require ./libs/jquery
 //= require_tree ./public
